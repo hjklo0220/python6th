@@ -1,0 +1,13 @@
+h1 {
+    color: #03d6c7; /*2023. 05. 25. 제목 색상 빨간색 */
+    text-align: center;
+
+}
+
+body {
+    color: red;
+       height: 50vh; /*상대 위치 */
+    background-color:#000;'
+    background-image: url('background.jpg');
+    background-position: center center;
+}
