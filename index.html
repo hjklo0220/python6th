@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
     <head>
         <title>My First Webpage</title>
     </head>
@@ -11,6 +11,93 @@
         <h4>Welcome (h4)</h4>
         <h5>Welcome (h5)</h5>
         <h6>Welcome (h6)</h6>
+        <br>
+        <h1>Paragraph</h1>
+        <p>This is paragraph</p>
+        <p>This is another <strong>paragraph</strong> of <i>text</i></p>
+        <br>
+        <a href="https://google.com" target="_blank">Link to google</a>
+        <h1>Images</h1>
+        <img alt="가로300px 세로200px의 랜덤 이미지" src="https://picsum.photos/300/200">
+        <br>
+        <h1>List</h1>
+        <ul>
+            <li><a href="https://google.com">google 이동</a></li>
+            <li><a href="https://naver.com">naver 이동</a></li>
+            <li>
+                <ul>
+                    <li>List item</li>
+                    <li>List item</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ol>
+            <li>Orderd List item</li>
+            <li>Orderd List item</li>
+            <li>Orderd List item</li>
+        </ol>
+        <br>
+        <h1>Table</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>철수</td>
+                    <td>김</td>
+                    <td>email1@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>영수</td>
+                    <td>박</td>
+                    <td>email2@naver.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h1>Registration Form</h1>
+        <form action="">
+            <fieldset>
+                <legend>Account</legend>
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">이메일</label>
+                <input type="text" id="email" name="email">
+                <br>
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password">
+            </fieldset>
+            <fieldset>
+                <legend>User Info</legend>
+                <label for="location">주소</label>
+                <select name="location" id="location">
+                    <option value="MA">MA</option>
+                    <option value="NY">NY</option>
+                    <option value="CA">CA</option>
+                </select>
+                <br>
+                <h4>성별</h4>
+                <label for="gender1">남성</label>
+                <input type="radio" name="gender" id="gender1" value="Male">
+                <label for="gender2">여성</label>
+                <input type="radio" name="gender" id="gender2" vaule="Female">
+                <br>
+                <h4>성별</h4>
+                <label for="gender11">남성</label>
+                <input type="checkbox" name="gender" id="gender11" vaule="Male">
+                <label for="gender12">여성</label>
+                <input type="checkbox" name="gender" id="gender12" vaule="Female">
+
+            </fieldset>
+            <input type="submit" value="등록">
+        </form>
     </body>
 </html>
 
