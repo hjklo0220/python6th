@@ -1,7 +1,4 @@
 
-h1 {
-    color: red;
-}
 
 .wrapper {
     border: #000 1px solid;
@@ -123,6 +120,147 @@ img {
     height: 50px;
     background: radial-gradient(circle, lightblue, darkblue);
 }
+
+h1.text1 { /* x오프셋, y오프셋, 블러, 색깔 */
+    text-shadow: 2px 2px 5px red;
+}
+h1.text2 {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px black;
+}
+h1.text3 {
+    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff
+}
+/*
+#box1 {
+    width: 300px;
+    height: 200px;
+    background-color: red;
+    box-shadow: 10px 10px 5px pink;
+}
+*/
+.card {
+    width:250px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2), /* rgba 에서 a는 투명도*/
+                0 6px 20px 0 rgba(0,0,0, 0.19);
+    text-align: center;
+}
+.card-header {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px;
+    font-size: 40px;
+}
+.card-container {
+    padding: 10px;
+}
+
+#box0 {
+    width: 100px;
+    height: 100px;
+    background: black;
+    transition: width 2s, height 4s;
+    transition-timing-function: ease-in-out;
+    /*
+    linear : 똑같은 속도로 바뀜
+    ease-in: 속도가 점점 빨라짐
+    ease-in-out: 빨라졋다가 느려짐 //(가속도그래프 생각)
+    */
+}
+#box1:hover {
+    width: 300px;
+    height: 300px;
+}
+
+#box2 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: colorchange;
+    animation-duration: 5s;
+}
+@keyframes colorchange { /* 함수 만들수 있음*/
+    0% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0;
+    }
+    50% {
+        background-color: green;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: blue;
+        left: 0;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
+}
+
+article {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 1px solid coral;
+}
+article h1{
+    column-span: all; /* 셀 병합*/
+}
+
+.textbox1 {
+    border: 2px solid;
+    padding: 20px;
+    width: 300px;
+    overflow: auto; /* 박스 작아지면 자동으로 스크롤 만들어줌*/
+    resize: both; /*우측 아래 늘리는거 생김*/
+}
+.textbox2 {
+    margin: 20px;
+    padding: 10px;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    outline: 1px solid red;
+    outline-offset: 10px;
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    height: 250px;
+    background-color: black;
+}
+.flex-item {
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+.first {
+    order: -1;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
