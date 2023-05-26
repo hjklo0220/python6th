@@ -1,51 +1,131 @@
-/*
+
 h1 {
-    color: #03d6c7;
-    text-align: center;
-}
-body {
     color: red;
-       height: 100vh;
-    background-color:#000;'
-    background-image: url('background.jpg');
-    background-position: center center;
-}
-*/
-
-body {
-    background: #f4f4f4;
-    font-family: arial, sans-serif;
-    line-height: 1.5em;
 }
 
-#container {
-    border: 1px #cccccc solid;
-    padding: 0 10px;
-    /*
-    padding: 0 10px 0 10px;
-    padding-top:0;
-    padding-right:10;
-    padding-bottom:0;
-    padding-left:10;
-    */
-    width: 800px;
-    margin: 30px auto; /*위아래는 auto 없음 */
-    overflow: hidden; /* visible, auto, scroll*/
+.wrapper {
+    border: #000 1px solid;
+    width: 600px;
+    height: 400px;
+    position: relative; /*상대적인 좌표값 사용*/
+    left: 50px;
+    top: 100px;
 }
 
-.highlight {
+.inside {
+    border: #ff0000 1px solid;
+    width: 200px;
+    height: 100px;
+    position: absolute; /* 절대적인 좌표값 사용 부모요소 기준으로 절대적 좌표*/
+    top: 20px;
+    left: 50px;
+}
+/* position: fixed - 브라우저 크기에 맞게 좌표 고정(장바구니 같은)*/
+
+a:hover { /*특정 조건에 맞을 때만 동작 hover:마우스 올릴때*/
     color: red;
     font-weight: bold;
-    font-size: 30px;
+}
+a:active { /* active:클릭 했을때*/
+    color: green;
+    font-weight:bold;
 }
 
-.left-side {
-    float : left; /* 떠다니는 느낌*/
-    width: 50%;
+.myForm input:focus { /*커서에 있는(입력을 받을 준비까지)*/
+    background:pink;
+    width: 300px;
 }
-/*
-.right-side{
-    float: right;
-    width: 50%
+
+.myList li:first-child {
+    color: green;
+    font-weight:bold;
 }
-*/
+.myList li:last-child {
+    color:red;
+    font-weight:bold;
+}
+
+.myList li:nth-child(3n+3) { /*3개씩 반복 + 3번째부터 */
+    color: orange;
+    font-weight: bold;
+}
+.myList li:nth-child(even) { /*짝수*/
+    background: yellow;
+    font-weight: bold;
+}
+.myList li:nth-child(odd) { /*홀수*/
+    background: grey;
+    font-weight: bold;
+}
+
+#rounded1 {
+    background : lightblue;
+    color: white;
+    width: 200px;
+    height: 140px;
+    padding: 10px;
+    border-radius: 50px;
+}
+#rounded2 {
+    background : orange;
+    color: white;
+    width: 200px;
+    height: 140px;
+    padding: 10px;
+    border-radius: 30px;
+}
+#rounded3 {
+    background : pink;
+    color: white;
+    width: 200px;
+    height: 140px;
+    padding: 10px;
+    border-radius: 70px;
+}
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%
+}
+
+#border-img {
+    border: 10px solid;
+    /*border-width: 10px;
+      border-style: solid;  위와 같은값*/
+    border-image: url('border.png') 30 round;
+}
+
+#my-bg {
+    background-image: url('border.png'), url('background.jpg');
+    background-position: left top, right bottom;
+    background-repeat: repeat, no-repeat;
+    padding: 20px;
+    background-size: 50px 50px, cover;
+}
+
+#grad1 {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to right, red, yellow);
+}
+#grad2 {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to bottom right, pink, purple);
+}
+#grad3 {
+    width: 200px;
+    height: 50px;
+    background: radial-gradient(red, yellow, green);
+}
+#grad4 {
+    width: 200px;
+    height: 50px;
+    background: radial-gradient(circle, lightblue, darkblue);
+}
+
+
+
+
+
+

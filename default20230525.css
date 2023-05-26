@@ -1,0 +1,51 @@
+/*
+h1 {
+    color: #03d6c7;
+    text-align: center;
+}
+body {
+    color: red;
+       height: 100vh;
+    background-color:#000;'
+    background-image: url('background.jpg');
+    background-position: center center;
+}
+*/
+
+body {
+    background: #f4f4f4;
+    font-family: arial, sans-serif;
+    line-height: 1.5em;
+}
+
+#container {
+    border: 1px #cccccc solid;
+    padding: 0 10px;
+    /*
+    padding: 0 10px 0 10px;
+    padding-top:0;
+    padding-right:10;
+    padding-bottom:0;
+    padding-left:10;
+    */
+    width: 800px;
+    margin: 30px auto; /*위아래는 auto 없음 */
+    overflow: hidden; /* visible, auto, scroll*/
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.left-side {
+    float : left; /* 떠다니는 느낌*/
+    width: 50%;
+}
+/*
+.right-side{
+    float: right;
+    width: 50%
+}
+*/
