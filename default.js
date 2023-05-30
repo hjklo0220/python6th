@@ -59,4 +59,24 @@ console.log("" + num1 + num2);  // 2030 덧셈기호로 문자에 덧셈해서 �
 console.log(num1 + " + " + num2 + " = " + sum);
 
 
+var text = prompt("Enter your name : ");
+document.write("Your name : " + text + "<br>");
 
+var len = text.length;      // length: 문자열 객체의 프로퍼티
+document.write("Number of characters : " + len + "<br>");
+
+document.write(text.charAt(2) + "<br>");    // 인덱스 2 출력 charAt() : 메소드(객체에 포함된 함수)
+
+document.write(text.toUpperCase() + "<br>") //대문자
+document.write(text.toLowerCase() + "<br>") //소문자
+
+var text1 = "hi ";
+var text2 = "bye";
+var text3 = text1.concat(text2);
+var text4 = text1 + text2;  //위와 같음
+document.write(text3 + "<br>");
+document.write(text4 + "<br>");
+
+var text5 = "hello";
+var result = text5.slice(0,-2);  // slice : 문자열 자르기 함수
+document.write(result + "<br>");
