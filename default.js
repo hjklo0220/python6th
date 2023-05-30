@@ -43,7 +43,20 @@ document.write("이름 : " + name + linebreak);
 document.write("이름 : " + age + linebreak);  // age 문자로 변형됨 (js의 특징)
 document.write("이름 : " + cgpa + linebreak);
 
+var lastName = "홍";
+var firstName = "길동";
+var fullName = lastName + firstName;
 
+console.log(fullName);
+console.log("Today is" + " a " + "beautiful day");
+console.log("My name is " + fullName);
+
+var num1 = 20;
+var num2 = 30;
+var sum = num1 + num2;
+console.log(num1 + num2);       // 50
+console.log("" + num1 + num2);  // 2030 덧셈기호로 문자에 덧셈해서 문자열로 바꿔버림 -js특징
+console.log(num1 + " + " + num2 + " = " + sum);
 
 
 
