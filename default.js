@@ -34,7 +34,7 @@ person = null; //null - '값 없음' 이라는 값이 있음
 console.log(typeof person, person); //object
 
 
-var name = "이승훈";
+var name = "홍길동";
 var age = 29;
 var cgpa = 3.92;
 var linebreak = "<br/>"
@@ -82,7 +82,7 @@ var text5 = "hello";
 var result = text5.slice(0,-2);  // slice : 문자열 자르기 함수
 document.write(result + "<br>");
 
-
+//데이터 타입 변환
 var num = "20";
 num = num.toString();
 console.log(typeof num); // typeof : 예약어
@@ -103,3 +103,25 @@ console.log(Number(false));
 console.log(Number("10"));
 console.log(Number(" 10 "));
 console.log(Number("10.25"));
+
+
+//연산자
+var num1 = parseInt(prompt("Enter First number : "));
+var num2 = parseInt(prompt("Enter Second :  number"));
+var lineBreak = "<br/>";
+
+var result = num1 + num2;
+document.write("the sum is : " + result + linebreak);
+
+result = num1 - num2;
+document.write("the sub is : " + result + linebreak);
+
+result = num1 * num2;
+document.write("the mul is : " + result + linebreak);
+
+result = num1 / num2;
+document.write("the div is : " + result + linebreak);
+
+result = num1 % num2;
+document.write("the remainder is : " + result + linebreak);
+
