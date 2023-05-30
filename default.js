@@ -32,3 +32,18 @@ var person = {
 console.log(typeof person, person); //object
 person = null; //null - '값 없음' 이라는 값이 있음
 console.log(typeof person, person); //object
+
+
+var name = "이승훈";
+var age = 29;
+var cgpa = 3.92;
+var linebreak = "<br/>"
+
+document.write("이름 : " + name + linebreak);
+document.write("이름 : " + age + linebreak);  // age 문자로 변형됨 (js의 특징)
+document.write("이름 : " + cgpa + linebreak);
+
+
+
+
+
