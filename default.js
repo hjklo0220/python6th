@@ -104,7 +104,7 @@ console.log(Number("10"));
 console.log(Number(" 10 "));
 console.log(Number("10.25"));
 
-
+/*
 //연산자
 var num1 = parseInt(prompt("Enter First number : "));
 var num2 = parseInt(prompt("Enter Second :  number"));
@@ -124,4 +124,15 @@ document.write("the div is : " + result + linebreak);
 
 result = num1 % num2;
 document.write("the remainder is : " + result + linebreak);
+*/
+
+// 삼각형 넓이 구하기
+var base = parseFloat(prompt("Enter 밑변 : "));
+var height = parseFloat(prompt("Enter 높이 : "));
+
+var area = base * height * 0.5;
+
+document.write("넓이 : " + area);
+
+
 
