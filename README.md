@@ -5,3 +5,5 @@
     - html
     - css
 
+#### 5월 30일
+ - Java Script 실습

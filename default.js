@@ -58,7 +58,7 @@ console.log(num1 + num2);       // 50
 console.log("" + num1 + num2);  // 2030 덧셈기호로 문자에 덧셈해서 문자열로 바꿔버림 -js특징
 console.log(num1 + " + " + num2 + " = " + sum);
 
-
+/*
 var text = prompt("Enter your name : ");
 document.write("Your name : " + text + "<br>");
 
@@ -69,6 +69,7 @@ document.write(text.charAt(2) + "<br>");    // 인덱스 2 출력 charAt() : 메
 
 document.write(text.toUpperCase() + "<br>") //대문자
 document.write(text.toLowerCase() + "<br>") //소문자
+*/
 
 var text1 = "hi ";
 var text2 = "bye";
@@ -80,3 +81,25 @@ document.write(text4 + "<br>");
 var text5 = "hello";
 var result = text5.slice(0,-2);  // slice : 문자열 자르기 함수
 document.write(result + "<br>");
+
+
+var num = "20";
+num = num.toString();
+console.log(typeof num); // typeof : 예약어
+var number = 20
+console.log(typeof number);
+number = toString(20);
+console.log(typeof number);
+
+var x = 2.56789
+console.log(x.toFixed(1), typeof x.toFixed(1));  // toFixed : 소수점 첫째자리까지 표현 (둘째자리에서 반올림)
+console.log(x.toFixed(2));
+
+console.log(x.toPrecision(1), typeof x.toPrecision(1)); // toPrecision : 소수점 첫째자리에서 반올림
+console.log(x.toPrecision(2));
+
+console.log(Number(true));
+console.log(Number(false));
+console.log(Number("10"));
+console.log(Number(" 10 "));
+console.log(Number("10.25"));
