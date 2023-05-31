@@ -143,28 +143,42 @@
 //}
 
 
-// 함수
+//// 함수
+//function message() {
+//    document.write("hello i am  a function without parameter" + "<br>");
+//}
+//
+//function welcomeMessage(name) {
+//    document.write("welcome" + name + '<br>');
+//}
+//
+//function addition(num1, num2){
+//    var sum = num1 + num2;
+//    document.write("addition is " + sum + '<br>');
+//}
+//
+//function square(num) {
+//    return num * num;
+//}
+//message();
+//welcomeMessage("홍길동");
+//addition(2, 3);
+//document.write("square of 5 is " + square(5) + "<br>");
 
-function message() {
-    document.write("hello i am  a function without parameter" + "<br>");
+
+// 즉시실행 함수 IIFE
+
+(function display(message) {    // 괄호로 감싸주고 파라미터 넘기면 바로 호출됨
+    console.log(message);
+})("hi");
+
+var display2 = function displayMessage(msg) {   // 함수 자체를 변수로 담을 수 있음 , 변수가 있어야 실행이 됨 displayMessage('hi') 실행 안됨
+    console.log(msg);
 }
 
-function welcomeMessage(name) {
-    document.write("welcome" + name + '<br>');
-}
+display2('i am message');
 
-function addition(num1, num2){
-    var sum = num1 + num2;
-    document.write("addition is " + sum + '<br>');
-}
-
-function square(num) {
-    return num * num;
-}
-message();
-welcomeMessage("홍길동");
-addition(2, 3);
-document.write("square of 5 is " + square(5) + "<br>");
-
-
+(function addNumbers(a, b) {
+    console.log(a + b);
+})(3, 4);
 
