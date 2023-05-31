@@ -166,19 +166,45 @@
 //document.write("square of 5 is " + square(5) + "<br>");
 
 
-// 즉시실행 함수 IIFE
+//// 즉시실행 함수 IIFE
+//
+//(function display(message) {    // 괄호로 감싸주고 파라미터 넘기면 바로 호출됨
+//    console.log(message);
+//})("hi");
+//
+//var display2 = function displayMessage(msg) {   // 함수 자체를 변수로 담을 수 있음 , 변수가 있어야 실행이 됨 displayMessage('hi') 실행 안됨
+//    console.log(msg);
+//}
+//
+//display2('i am message');
+//
+//(function addNumbers(a, b) {
+//    console.log(a + b);
+//})(3, 4);
 
-(function display(message) {    // 괄호로 감싸주고 파라미터 넘기면 바로 호출됨
-    console.log(message);
-})("hi");
 
-var display2 = function displayMessage(msg) {   // 함수 자체를 변수로 담을 수 있음 , 변수가 있어야 실행이 됨 displayMessage('hi') 실행 안됨
-    console.log(msg);
-}
+// 자료형 - 배열
+var names = new Array(20) // 객체를 인스턴스하는 명령어
+names[0] = "지훈"
+names[1] = "은영"
 
-display2('i am message');
+console.log(names[1]);
 
-(function addNumbers(a, b) {
-    console.log(a + b);
-})(3, 4);
+var students = ["지훈", "은영", "수진", "준호"];
+console.log("students = ", students);
+console.log("2번 인덱스의 학생 : ", students[2]);
 
+console.log("students 배열의 길이", students.length);
+
+students.push("길동"); // 배열 요소 추가
+console.log("push 후 학생 배열 = " + students);
+
+students.pop(); // 배열 요소 삭제 , 배열의 마지막 요소를 뺌 파라미터를 빼는게 아님
+console.log("pop 후 학생 배열 = " + students);
+
+var numArray1 = [10, 20];
+var numArray2 = [30, 40];
+var numArray = numArray1.concat(numArray2);
+
+console.log("배열 잇기(concatenation) : " + numArray);
+console.log(numArray1 + numArray2);
