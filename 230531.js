@@ -29,32 +29,44 @@
 //console.log('num1 > num2 && num1 < num5', num1 > num2 && !(num1 < num5));   //not !
 
 
-//조건문
-var num1 = parseInt(prompt("첫번째 숫자 입력 : "));
-var num2 = parseInt(prompt("두번째 숫자 입력 : "));
+////조건문
+//var num1 = parseInt(prompt("첫번째 숫자 입력 : "));
+//var num2 = parseInt(prompt("두번째 숫자 입력 : "));
+//
+//if(num1 > num2) {
+//    console.log("큰 수 1: " + num1);
+//}
+//if(num1 < num2) {
+//    console.log("큰 수 2: " + num2);
+//}
+//if(num1 == num2) {
+//    console.log("같은 수")
+//}
+//
+//if(num1 > num2) {       //나눠서 짜는거보다 묶어서 사용하는 것이 조금더 효율적 가독성도 높아짐, 하지만 위와같이 나눠써야 할 때도 있음
+//    console.log("큰 수 num1 : " + num1);
+//} else if(num1 < num2) {
+//    console.log("큰 수 num2" + num2);
+//} else if(num1 == num2) {
+//    console.log("같은 수")
+//}
+//
+//if(num1 > num2) {
+//    console.log("큰 수 num1 : " + num1);
+//} else if(num1 < num2) {
+//    console.log("큰 수 num2" + num2);
+//} else (num1 == num2) {     // 예외조건에 대한 대비 else
+//    console.log("같은 수")
+//}
 
-if(num1 > num2) {
-    console.log("큰 수 1: " + num1);
-}
-if(num1 < num2) {
-    console.log("큰 수 2: " + num2);
-}
-if(num1 == num2) {
-    console.log("같은 수")
+
+// 모음 자음 구별하기
+var letter = prompt("Enter a letter : ");
+letter = letter.toLowerCase();
+
+if(letter =='a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
+    console.log('Vowel');
+} else {
+    console.log('Consonant');
 }
 
-if(num1 > num2) {       //나눠서 짜는거보다 묶어서 사용하는 것이 조금더 효율적 가독성도 높아짐, 하지만 위와같이 나눠써야 할 때도 있음
-    console.log("큰 수 num1 : " + num1);
-} else if(num1 < num2) {
-    console.log("큰 수 num2" + num2);
-} else if(num1 == num2) {
-    console.log("같은 수")
-}
-
-if(num1 > num2) {
-    console.log("큰 수 num1 : " + num1);
-} else if(num1 < num2) {
-    console.log("큰 수 num2" + num2);
-} else (num1 == num2) {     // 예외조건에 대한 대비 else
-    console.log("같은 수")
-}
