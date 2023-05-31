@@ -71,47 +71,57 @@
 //}
 
 
-// switch
-var digit = parseInt(prompt('숫자 입력 : '));
+//// switch
+//var digit = parseInt(prompt('숫자 입력 : '));
+//
+//switch (digit) {    // break를 지우면 맞는 조건부터 break만날때까지 계속실행됨
+//    case 0:
+//        document.write('Zero');
+//        break;
+//    case 1:
+//        document.write('one');
+//        break;
+//    case 2:
+//        document.write('two');
+//        break;
+//    case 3:
+//        document.write('three');
+//        break;
+//    case 4:
+//        document.write('four');
+//        break;
+//    case 5:
+//        document.write('five');
+//        break;
+//    case 6:
+//        document.write('six');
+//        break;
+//    case 7:
+//        document.write('seven');
+//        break;
+//    case 8:
+//        document.write('eight');
+//        break;
+//    case 9:
+//        document.write('nine');
+//        break;
+//    default:
+//        document.write('Not a digit');
+//        break;
+//}
 
-switch (digit) {    // break를 지우면 맞는 조건부터 break만날때까지 계속실행됨
-    case 0:
-        document.write('Zero');
-        break;
-    case 1:
-        document.write('one');
-        break;
-    case 2:
-        document.write('two');
-        break;
-    case 3:
-        document.write('three');
-        break;
-    case 4:
-        document.write('four');
-        break;
-    case 5:
-        document.write('five');
-        break;
-    case 6:
-        document.write('six');
-        break;
-    case 7:
-        document.write('seven');
-        break;
-    case 8:
-        document.write('eight');
-        break;
-    case 9:
-        document.write('nine');
-        break;
-    default:
-        document.write('Not a digit');
-        break;
+
+var i = 1;
+
+do {    //한번 실행하고 조건을 확인
+    document.write("멋쟁이사자 : " + i++ + '<br/>');
+} while (i < 1)
+
+document.write("=================<br>")
+var j = 1;
+
+while(j < 1){   //바로 조건확인후 실행
+    document.write("멋쟁이사자 : " + j++ + '<br/>');
+
 }
-
-
-
-
-
 
