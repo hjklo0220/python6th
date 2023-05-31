@@ -111,17 +111,35 @@
 //}
 
 
-var i = 1;
+//// 반복문 while, do-while 차이
+//var i = 1;
+//
+//do {    //한번 실행하고 조건을 확인
+//    document.write("멋쟁이사자 : " + i++ + '<br/>');
+//} while (i < 1)
+//
+//document.write("=================<br>")
+//var j = 1;
+//
+//while(j < 1){   //바로 조건확인후 실행
+//    document.write("멋쟁이사자 : " + j++ + '<br/>');
+//
+//}
 
-do {    //한번 실행하고 조건을 확인
-    document.write("멋쟁이사자 : " + i++ + '<br/>');
-} while (i < 1)
 
-document.write("=================<br>")
-var j = 1;
-
-while(j < 1){   //바로 조건확인후 실행
-    document.write("멋쟁이사자 : " + j++ + '<br/>');
-
+//break continue
+for(var i=1; i<=10; i++){
+    if(i == 2) {
+        break;
+    }
+    document.write(i + '<br>');
 }
+document.write("============<br>")
+for(var k=1; k<=10; k++){
+    if(k==2){
+        continue;   // 조건이 맞을때 루프 잠깐 빠져나옴
+    }
+    document.write(k + "<br>");
+}
+
 
