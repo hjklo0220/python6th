@@ -127,19 +127,44 @@
 //}
 
 
-//break continue
-for(var i=1; i<=10; i++){
-    if(i == 2) {
-        break;
-    }
-    document.write(i + '<br>');
+////break continue
+//for(var i=1; i<=10; i++){
+//    if(i == 2) {
+//        break;
+//    }
+//    document.write(i + '<br>');
+//}
+//document.write("============<br>")
+//for(var k=1; k<=10; k++){
+//    if(k==2){
+//        continue;   // 조건이 맞을때 루프 잠깐 빠져나옴
+//    }
+//    document.write(k + "<br>");
+//}
+
+
+// 함수
+
+function message() {
+    document.write("hello i am  a function without parameter" + "<br>");
 }
-document.write("============<br>")
-for(var k=1; k<=10; k++){
-    if(k==2){
-        continue;   // 조건이 맞을때 루프 잠깐 빠져나옴
-    }
-    document.write(k + "<br>");
+
+function welcomeMessage(name) {
+    document.write("welcome" + name + '<br>');
 }
+
+function addition(num1, num2){
+    var sum = num1 + num2;
+    document.write("addition is " + sum + '<br>');
+}
+
+function square(num) {
+    return num * num;
+}
+message();
+welcomeMessage("홍길동");
+addition(2, 3);
+document.write("square of 5 is " + square(5) + "<br>");
+
 
 
