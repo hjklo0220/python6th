@@ -60,13 +60,58 @@
 //}
 
 
-// 모음 자음 구별하기
-var letter = prompt("Enter a letter : ");
-letter = letter.toLowerCase();
+//// 모음 자음 구별하기
+//var letter = prompt("Enter a letter : ");
+//letter = letter.toLowerCase();
+//
+//if(letter =='a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
+//    console.log('Vowel');
+//} else {
+//    console.log('Consonant');
+//}
 
-if(letter =='a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
-    console.log('Vowel');
-} else {
-    console.log('Consonant');
+
+// switch
+var digit = parseInt(prompt('숫자 입력 : '));
+
+switch (digit) {    // break를 지우면 맞는 조건부터 break만날때까지 계속실행됨
+    case 0:
+        document.write('Zero');
+        break;
+    case 1:
+        document.write('one');
+        break;
+    case 2:
+        document.write('two');
+        break;
+    case 3:
+        document.write('three');
+        break;
+    case 4:
+        document.write('four');
+        break;
+    case 5:
+        document.write('five');
+        break;
+    case 6:
+        document.write('six');
+        break;
+    case 7:
+        document.write('seven');
+        break;
+    case 8:
+        document.write('eight');
+        break;
+    case 9:
+        document.write('nine');
+        break;
+    default:
+        document.write('Not a digit');
+        break;
 }
+
+
+
+
+
 
