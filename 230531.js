@@ -183,28 +183,55 @@
 //})(3, 4);
 
 
-// 자료형 - 배열
-var names = new Array(20) // 객체를 인스턴스하는 명령어
-names[0] = "지훈"
-names[1] = "은영"
+//// 자료형 - 배열
+//var names = new Array(20) // 객체를 인스턴스하는 명령어
+//names[0] = "지훈"
+//names[1] = "은영"
+//
+//console.log(names[1]);
+//
+//var students = ["지훈", "은영", "수진", "준호"];
+//console.log("students = ", students);
+//console.log("2번 인덱스의 학생 : ", students[2]);
+//
+//console.log("students 배열의 길이", students.length);
+//
+//students.push("길동"); // 배열 요소 추가
+//console.log("push 후 학생 배열 = " + students);
+//
+//students.pop(); // 배열 요소 삭제 , 배열의 마지막 요소를 뺌 파라미터를 빼는게 아님
+//students.splice(1, 0, "추가"); // splice(), 배열 중간에 추가
+//console.log("pop 후 학생 배열 = " + students);
+//
+//var numArray1 = [10, 20];
+//var numArray2 = [30, 40];
+//var numArray = numArray1.concat(numArray2);
+//
+//console.log("배열 잇기(concatenation) : " + numArray);
+//console.log(numArray1 + numArray2);
 
-console.log(names[1]);
 
-var students = ["지훈", "은영", "수진", "준호"];
-console.log("students = ", students);
-console.log("2번 인덱스의 학생 : ", students[2]);
+//날짜
 
-console.log("students 배열의 길이", students.length);
+var date = new Date();
+console.log(date);
 
-students.push("길동"); // 배열 요소 추가
-console.log("push 후 학생 배열 = " + students);
+var year = date.getFullYear();
+console.log(year);
 
-students.pop(); // 배열 요소 삭제 , 배열의 마지막 요소를 뺌 파라미터를 빼는게 아님
-console.log("pop 후 학생 배열 = " + students);
+var month = date.getMonth();
+console.log(month);
 
-var numArray1 = [10, 20];
-var numArray2 = [30, 40];
-var numArray = numArray1.concat(numArray2);
+var currentDate = date.getDate();
+console.log(currentDate);
 
-console.log("배열 잇기(concatenation) : " + numArray);
-console.log(numArray1 + numArray2);
+var currentDay = date.getDay(); // 요일
+console.log(currentDay)
+
+var currentHour = date.getHours(); // 시
+console.log(currentHour);
+
+var currentMinute = date.getMinutes(); // 분
+console.log(currentMinute);
+
+console.log(date.getTime());//유닉스 타임 1970/1/1 부터 증분
