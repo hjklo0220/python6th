@@ -1,4 +1,4 @@
-
+//출력
 document.write('hello world2');
 document.write("<h1>Welcome to JS Program</h1>");
 document.write("<h2>Welcome to JS Program</h2>");
@@ -12,6 +12,7 @@ console.error("Welcome JS Program");
 //var a = prompt('Welcome JS Program');
 //console.log(a);
 
+//데이터 타입
 console.log(123, typeof 123);    // number
 console.log(123.5, typeof 123.5);  // number
 console.log('123', typeof '123');  // string
@@ -33,7 +34,7 @@ console.log(typeof person, person); //object
 person = null; //null - '값 없음' 이라는 값이 있음
 console.log(typeof person, person); //object
 
-
+//문자열 연결
 var name = "홍길동";
 var age = 29;
 var cgpa = 3.92;
@@ -59,6 +60,7 @@ console.log("" + num1 + num2);  // 2030 덧셈기호로 문자에 덧셈해서 �
 console.log(num1 + " + " + num2 + " = " + sum);
 
 /*
+//문자열 함수 실습
 var text = prompt("Enter your name : ");
 document.write("Your name : " + text + "<br>");
 
@@ -81,6 +83,7 @@ document.write(text4 + "<br>");
 var text5 = "hello";
 var result = text5.slice(0,-2);  // slice : 문자열 자르기 함수
 document.write(result + "<br>");
+
 
 //데이터 타입 변환
 var num = "20";
