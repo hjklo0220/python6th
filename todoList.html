@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Todo List</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>To Do List</h1>
+</header>
+<main>
+    <div class="container mt-4">
+        <div class="row">
+            <div style="display: flex;">
+                <input id="todo" class="input-group-text" type="text" size="50" style="flex:1">
+                <button type="button" class="btn btn-primary" id="add" onclick="addList()">등록</button>
+            </div>     
+        </div>
+            
+            <div class="container mt-4">
+                <ul class="list-group" id="list" ><h3>Todo List</h3><hr></ul>
+            </div> 
+            
+        </div>
+    </div>
+</main>
+<footer>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+<script>
+    var inputTodo = document.getElementById('todo'); // inputTodo에 todo id 받아옴
+    var list = document.getElementById('list');     // list에 list id받아옴
+
+    function addList(){
+        var item = document.createElement('li');    // li태그 생성해서 item에 저장
+        item.innerText = inputTodo.value;           // input 값 가져와서 item innerText에 저장
+        item.classList.add('list-group-item')       // 태그안에 class지정
+        inputTodo.value = null;                     // input 박스 비우기
+
+        var deleteButton = document.createElement('button') // 삭제 버튼 태그 생성해서 deleteButton에 저장
+        deleteButton.classList.add('btn', 'btn-danger')     // 버튼태그 안에 클래스 지정
+        deleteButton.textContent="삭제"        
+
+        list.appendChild(item);             // id list인 곳에 item 추가
+        item.appendChild(deleteButton)      //삭제 버튼도 같이 추가
+
+        deleteButton.addEventListener('click', function(){
+            list.removeChild(item);         // 삭제 버튼 눌리면 해당 item삭제
+        })
+    }
+</script>
+
+</body>
+</html>
