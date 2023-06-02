@@ -59,7 +59,7 @@
         list.appendChild(item);             // id list인 곳에 item 추가
         item.appendChild(deleteButton)      //삭제 버튼도 같이 추가
 
-        deleteButton.addEventListener('click', function(){
+        deleteButton.addEventListener('click', function deleteButton(){
             list.removeChild(item);         // 삭제 버튼 눌리면 해당 item삭제
         })
     }
