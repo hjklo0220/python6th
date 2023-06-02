@@ -23,16 +23,16 @@
 <main>
     <div class="container mt-4">
         <div class="row">
-            <div style="display: flex;">
-                <input id="todo" class="input-group-text" type="text" size="50" style="flex:1">
+            <div style="display: flex;"> <!---->
+                <input id="todo" class="input-group-text" type="text" size="50" style="flex:1"> <!-- -->
                 <button type="button" class="btn btn-primary" id="add" onclick="addList()">등록</button>
-            </div>     
+            </div>
         </div>
-            
+
             <div class="container mt-4">
                 <ul class="list-group" id="list" ><h3>Todo List</h3><hr></ul>
-            </div> 
-            
+            </div>
+
         </div>
     </div>
 </main>
@@ -45,6 +45,8 @@
 <script>
     var inputTodo = document.getElementById('todo'); // inputTodo에 todo id 받아옴
     var list = document.getElementById('list');     // list에 list id받아옴
+    var array = new Array();    //배열 생성
+    console.log(array)
 
     function addList(){
         var item = document.createElement('li');    // li태그 생성해서 item에 저장
@@ -52,9 +54,12 @@
         item.classList.add('list-group-item')       // 태그안에 class지정
         inputTodo.value = null;                     // input 박스 비우기
 
+        array.push(item.innerText); //배열에 input값 넣어두기
+        console.log(array);
+
         var deleteButton = document.createElement('button') // 삭제 버튼 태그 생성해서 deleteButton에 저장
         deleteButton.classList.add('btn', 'btn-danger')     // 버튼태그 안에 클래스 지정
-        deleteButton.textContent="삭제"        
+        deleteButton.textContent="삭제"
 
         list.appendChild(item);             // id list인 곳에 item 추가
         item.appendChild(deleteButton)      //삭제 버튼도 같이 추가
