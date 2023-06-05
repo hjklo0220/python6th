@@ -186,6 +186,15 @@
 # age = "20"
 # print("my name is", name, "and my age is", age)
 
+# # 입력
+# name = input("name : ")
+# phone = input("phone number: ")
+# phone = int(phone)
+# print(name,phone, type(phone))
+#
+# price = float(input("price :"))
+# print(price, type(price))
 
 
+# print("asd,.,.\''\"""\"asd")
 
