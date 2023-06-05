@@ -99,12 +99,36 @@
 # print('to' not in s3)
 
 
-# is 연산자
-a = 10
-b = 10
-print(a is b)
+# # is 연산자
+# a = 10
+# b = 10
+# print(a is b)
+#
+# a = 10
+# b = '10'
+# print(a is b)
+# print(a is not b)
 
-a = 10
-b = '10'
-print(a is b)
-print(a is not b)
+
+# 타입 변환
+# 암시적 타입 변환 (동적 타입핑)
+a = 5
+b = 2
+print(b, type(b))
+value = a / b
+print(value, type(value))
+
+x = 10
+y = 5.5
+total = x + y
+print("x + Y =", total, type(total))
+
+j = "hello"
+k = "world"
+p = j + k
+print(p, type(p))
+
+q = 20
+u = '10'
+r = q + u   # 오류
+print(r, type(r))
