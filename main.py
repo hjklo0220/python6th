@@ -88,12 +88,23 @@
 # print(f'{a} >> 2  : ', a >> 2, bin(a>>b))
 
 
-# 맴버 in 연산자
-s1 = "Welcome to Python"
-print("to" in s1)
-s2 = "Welcome top python"
-print('to' in s2)
-s3 = "Welcome to Python"
-print('wel' in s3)  # 대소문자 구문함
+# # 맴버 in 연산자
+# s1 = "Welcome to Python"
+# print("to" in s1)
+# s2 = "Welcome top python"
+# print('to' in s2)
+# s3 = "Welcome to Python"
+# print('wel' in s3)  # 대소문자 구문함
+#
+# print('to' not in s3)
 
-print('to' not in s3)
+
+# is 연산자
+a = 10
+b = 10
+print(a is b)
+
+a = 10
+b = '10'
+print(a is b)
+print(a is not b)
