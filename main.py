@@ -159,6 +159,33 @@
 # vn = tuple(n)
 # print(vn, type(vn))  # 튜플: 순서쌍에 가까움
 
-n = ('kim', 'park', 'lee')
-vn = list(n)
-print(vn, type(vn))
+# n = ('kim', 'park', 'lee')
+# vn = list(n)
+# print(vn, type(vn))
+
+
+# 입출력
+# print("1")
+# print("2", end="")
+# print("3")
+# print("1")
+
+# # 객체 출력
+# data = [10, 20, -50, 21.3, "hello"]
+# print(data)
+#
+# print("hello", "hi", "bye") # 띄어쓰기가 됨 : sep가 기본이 " "라서 그럼, 문자열 구분자
+# print("hello", "hi", "bye", sep="***")
+# print("hello", "hi", "bye", sep="***", end="\t")
+# print("hello", "hi", "bye", sep="***", end="\n")  # end 기본값
+#
+# # 변수 출력
+# m = 40
+# print("value :", m)
+# name = "홍길동"
+# age = "20"
+# print("my name is", name, "and my age is", age)
+
+
+
+
