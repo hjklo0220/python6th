@@ -111,24 +111,41 @@
 
 
 # 타입 변환
-# 암시적 타입 변환 (동적 타입핑)
+# # 암시적 타입 변환 (동적 타입핑)
+# a = 5
+# b = 2
+# print(b, type(b))
+# value = a / b
+# print(value, type(value))
+#
+# x = 10
+# y = 5.5
+# total = x + y
+# print("x + Y =", total, type(total))
+#
+# j = "hello"
+# k = "world"
+# p = j + k
+# print(p, type(p))
+#
+# q = 20
+# u = '10'
+# r = q + u   # 오류
+# print(r, type(r))
+
+# 명시적 타입 변환 (개발자가 의도해서 변경)
 a = 5
 b = 2
-print(b, type(b))
 value = a / b
 print(value, type(value))
-
-x = 10
-y = 5.5
-total = x + y
-print("x + Y =", total, type(total))
-
-j = "hello"
-k = "world"
-p = j + k
-print(p, type(p))
+int_value = int(value)
+print(int_value, type(int_value))
 
 q = 20
 u = '10'
-r = q + u   # 오류
+print(u, type(u))
+r = q + int(u)
 print(r, type(r))
+
+
+
