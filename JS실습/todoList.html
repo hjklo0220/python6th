@@ -23,7 +23,7 @@
 <main>
     <div class="container mt-4">
         <div class="row">
-            <div style="display: flex;"> <!---->
+            <div class="display: flex;"> <!---->
                 <input id="todo" class="input-group-text" type="text" size="50" style="flex:1"> <!-- -->
                 <button type="button" class="btn btn-primary" id="add" onclick="addList()">등록</button>
             </div>
@@ -54,11 +54,15 @@
         item.classList.add('list-group-item')       // 태그안에 class지정
         inputTodo.value = null;                     // input 박스 비우기
 
+        
+        localStorage.setItem('list', item.innerText)
+        
         array.push(item.innerText); //배열에 input값 넣어두기
         console.log(array);
 
         var deleteButton = document.createElement('button') // 삭제 버튼 태그 생성해서 deleteButton에 저장
         deleteButton.classList.add('btn', 'btn-danger')     // 버튼태그 안에 클래스 지정
+        deleteButton.onclick=deleteItem
         deleteButton.textContent="삭제"
 
         list.appendChild(item);             // id list인 곳에 item 추가
@@ -68,6 +72,15 @@
             list.removeChild(item);         // 삭제 버튼 눌리면 해당 item삭제
         })
     }
+
+    function deleteItem() {
+        
+        var delIndex = array.indexOf(localStorage.getItem('list'));
+            console.log(delIndex);
+
+    }
+
+
 </script>
 
 </body>
