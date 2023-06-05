@@ -58,18 +58,31 @@
 #
 # print(f'not({a} < {b}) : ', not (a < b))
 
-# 할당 연산자 =
+# # 할당 연산자 =
+# a = 10
+# b = 20
+# m = 15
+#
+# y = a + b
+# print(y)
+# m += 10
+# print(m)
+#
+# m **= 2
+# print(m)
+#
+# m //= 10
+# print(m)
+
+# 비트연산자
 a = 10
-b = 20
-m = 15
+b = 15
 
-y = a + b
-print(y)
-m += 10
-print(m)
+print('a: ', bin(a))  # 0b: 2진수, 0x: 16진수
+print('a: ', hex(a))
+print('b: ', bin(b))
+print('~b : ', ~b, bin(~b))
 
-m **= 2
-print(m)
-
-m //= 10
-print(m)
+print(f'{a} & {b}  : ', a & b, bin(a&b))
+print(f'{a} << 2  : ', a << 2, bin(a<<b))
+print(f'{a} >> 2  : ', a >> 2, bin(a>>b))
