@@ -46,14 +46,30 @@
 # print(f'{a} == {b} : ', a == b)
 # print(f'{a} != {b} : ', a != b)
 
-# 논리연산자
-a = 5
-b = 2
-c = 3
-d = 200
-print(f'{a} > {b} and {a} > {c} : ', a > b and a > c)
-print(f'{a} > {b} and {a} < {c} : ', b < a < c)  # 메소트 체이닝 : 파이썬이 스크립트언어라서 가능
+# # 논리연산자
+# a = 5
+# b = 2
+# c = 3
+# d = 200
+# print(f'{a} > {b} and {a} > {c} : ', a > b and a > c)
+# print(f'{a} > {b} and {a} < {c} : ', b < a < c)  # 메소트 체이닝 : 파이썬이 스크립트언어라서 가능
+#
+# print(f'{a} > {b} or {a} > {c} : ', a > b or a < c)
+#
+# print(f'not({a} < {b}) : ', not (a < b))
 
-print(f'{a} > {b} or {a} > {c} : ', a > b or a < c)
+# 할당 연산자 =
+a = 10
+b = 20
+m = 15
 
-print(f'not({a} < {b}) : ', not (a < b))
+y = a + b
+print(y)
+m += 10
+print(m)
+
+m **= 2
+print(m)
+
+m //= 10
+print(m)
