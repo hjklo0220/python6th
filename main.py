@@ -74,15 +74,26 @@
 # m //= 10
 # print(m)
 
-# 비트연산자
-a = 10
-b = 15
+# # 비트연산자
+# a = 10
+# b = 15
+#
+# print('a: ', bin(a))  # 0b: 2진수, 0x: 16진수
+# print('a: ', hex(a))
+# print('b: ', bin(b))
+# print('~b : ', ~b, bin(~b))
+#
+# print(f'{a} & {b}  : ', a & b, bin(a&b))
+# print(f'{a} << 2  : ', a << 2, bin(a<<b))
+# print(f'{a} >> 2  : ', a >> 2, bin(a>>b))
 
-print('a: ', bin(a))  # 0b: 2진수, 0x: 16진수
-print('a: ', hex(a))
-print('b: ', bin(b))
-print('~b : ', ~b, bin(~b))
 
-print(f'{a} & {b}  : ', a & b, bin(a&b))
-print(f'{a} << 2  : ', a << 2, bin(a<<b))
-print(f'{a} >> 2  : ', a >> 2, bin(a>>b))
+# 맴버 in 연산자
+s1 = "Welcome to Python"
+print("to" in s1)
+s2 = "Welcome top python"
+print('to' in s2)
+s3 = "Welcome to Python"
+print('wel' in s3)  # 대소문자 구문함
+
+print('to' not in s3)
