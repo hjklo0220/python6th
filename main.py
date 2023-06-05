@@ -133,19 +133,32 @@
 # r = q + u   # 오류
 # print(r, type(r))
 
-# 명시적 타입 변환 (개발자가 의도해서 변경)
-a = 5
-b = 2
-value = a / b
-print(value, type(value))
-int_value = int(value)
-print(int_value, type(int_value))
+# # 명시적 타입 변환 (개발자가 의도해서 변경)
+# a = 5
+# b = 2
+# value = a / b
+# print(value, type(value))
+# int_value = int(value)
+# print(int_value, type(int_value))
+#
+# q = 20
+# u = '10'
+# print(u, type(u))
+# r = q + int(u)
+# print(r, type(r))
 
-q = 20
-u = '10'
-print(u, type(u))
-r = q + int(u)
-print(r, type(r))
+# n1 = 10.77
+# vn1 = int(n1)   # 뒤에 소수점 버림(반올림 아님)
+# print(vn1, type(vn1))
+# vn1 = float(vn1)
+# print(vn1, type(vn1))
+# vn1 = complex(vn1)  # 복소수
+# print(vn1, type(vn1))
 
+# n = "hello"
+# vn = tuple(n)
+# print(vn, type(vn))  # 튜플: 순서쌍에 가까움
 
-
+n = ('kim', 'park', 'lee')
+vn = list(n)
+print(vn, type(vn))
