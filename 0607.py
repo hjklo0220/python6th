@@ -245,6 +245,8 @@ str3 = '''
 		hello
 			python
 '''
+
+
 # print(str1)
 # print(str2)
 # print(str3)
@@ -262,31 +264,54 @@ str3 = '''
 # print(str7)
 # print(str8)
 
-# 문자열 함수
-s = "Hello world"
-print(s.upper())  # 모두대문자
-print(s.lower())  # 모두소문자
-print(s.swapcase())  # 대소문자 변경
-print(s.title())  # 맨 앞자만 대문자
-print(s.isupper())  # 모두 대문자면 True
-print(s.islower())  # 모두 소문자면 True
-print(s.istitle())  # 맨앞자 대문자면 True
-
-print(s.isdigit())  # 숫자면 True
-print(s.isalpha())  # 알파벳만 있으면 True
-
-print(s.lstrip())	# 왼쪽 공백 제거
-print(s.rstrip())	# 오른쪽 공백 제거
-print(s.strip())	# 양옆 공백 제거
-
-print(s.replace("world", "there"))	# 문자열 변경
-print(s.split(" "))	# 문자열 분리
-split = s.split(" ")
-print(" ".join(split))	# 문자열 합성
-
-print(s.startswith("Hello"))	# 해당문자열이 Hello로 시작하면 True
-print(s.endswith("ld"))	# 문자열이 ld로 끝나는지
-
-
+# # 문자열 함수
+# s = "Hello world"
+# print(s.upper())  # 모두대문자
+# print(s.lower())  # 모두소문자
+# print(s.swapcase())  # 대소문자 변경
+# print(s.title())  # 맨 앞자만 대문자
+# print(s.isupper())  # 모두 대문자면 True
+# print(s.islower())  # 모두 소문자면 True
+# print(s.istitle())  # 맨앞자 대문자면 True
+#
+# print(s.isdigit())  # 숫자면 True
+# print(s.isalpha())  # 알파벳만 있으면 True
+#
+# print(s.lstrip())	# 왼쪽 공백 제거
+# print(s.rstrip())	# 오른쪽 공백 제거
+# print(s.strip())	# 양옆 공백 제거
+#
+# print(s.replace("world", "there"))	# 문자열 변경
+# print(s.split(" "))	# 문자열 분리
+# split = s.split(" ")
+# print(" ".join(split))	# 문자열 합성
+#
+# print(s.startswith("Hello"))	# 해당문자열이 Hello로 시작하면 True
+# print(s.endswith("ld"))	# 문자열이 ld로 끝나는
 
 
+# 함수
+def disp():
+	name = "phthon"
+	print("hello", name)
+
+
+disp()
+disp()
+disp()
+
+
+def add(y):
+	x = 10
+	z = x + y
+	print(z)
+
+
+add(20)
+
+def add(y):
+	x = 10.1234
+	print(x + y)
+	print(f"Formatted Output:{x + y:6.2f}")	# ":" 명세 하는것 f:float 숫자는 6칸으로 소수2자리까지
+
+add(20)
