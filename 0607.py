@@ -133,11 +133,40 @@
 # print("코드 종료")
 
 
-# pass
-a = 5
-if a < 6:
-	pass
-else:
-	print("6보다 큼")
+# # pass
+# a = 5
+# if a < 6:
+# 	pass  # FIXME test
+# else:
+# 	print("6보다 큼")	# TODO 작업 진행
+
+
+# 배열
+import array
+stu_roll = array.array('i', [101, 102, 103, 104, 105])
+print(stu_roll[0])
+print(stu_roll[1])
+print(stu_roll[2])
+print(stu_roll[3])
+print(stu_roll[4])
+
+print("for in")
+for ele in stu_roll:
+	print(ele)
+
+print("index를 이용")
+n = len(stu_roll)
+for i in range(n):
+	print(i, "=", stu_roll[i])
+
+print("while")
+i = 0
+while i < n:
+	print(i, "=", stu_roll[i])
+	i += 1
+
+
+
+
 
 
