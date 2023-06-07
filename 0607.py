@@ -220,30 +220,46 @@ stu_roll = array('i', [101, 102, 103, 104, 105, 106, 107])
 # 	i += 1
 
 
-print("array slicing")
-print(stu_roll)
-print("인덱스 1~4 까지")
-print(stu_roll[1:5])
-print("0~끝까지")
-print(stu_roll[0:])
-print("처음부터 5번째까지")
-print(stu_roll[:5])
-print("마지막 요소 4개")
-print(stu_roll[-4:])
-print("0부터 6번째 까지 2개씩 건너뛰어")
-print(stu_roll[0:7:2])
-print("마지막 5개 요소중 [-5 - (-3)] = -2 오른쪽으로부터 2개 요소 출력")
-print(stu_roll[-5:-3])
+# print("array slicing")
+# print(stu_roll)
+# print("인덱스 1~4 까지")
+# print(stu_roll[1:5])
+# print("0~끝까지")
+# print(stu_roll[0:])
+# print("처음부터 5번째까지")
+# print(stu_roll[:5])
+# print("마지막 요소 4개")
+# print(stu_roll[-4:])
+# print("0부터 6번째 까지 2개씩 건너뛰어")
+# print(stu_roll[0:7:2])
+# print("마지막 5개 요소중 [-5 - (-3)] = -2 오른쪽으로부터 2개 요소 출력")
+# print(stu_roll[-5:-3])
 
 
+# 문자열
+str1 = "hello"
+str2 = "python"
+str3 = '''
+	hi
+		hello
+			python
+'''
+print(str1)
+print(str2)
+print(str3)
 
+str4 = "aaa'bb'aa"
+str5 = 'xxxx"aa"xxx'
+print(str4)
+print(str5)
 
+str6 = "hello \n bye"
+str7 = "hello \\n bye"
+str8 = r"hello \n bye"
 
-
-
-
-
-
+print(str6)
+print(str7)
+print(str8)
 
 
 
