@@ -165,34 +165,54 @@
 # 	print(i, "=", stu_roll[i])
 # 	i += 1
 
-#
+# # 배열 추가 삭제
 from array import *
 stu_roll = array('i', [101, 102, 103, 104, 105])
+# n = len(stu_roll)
+# i = 0
+# while i < n:
+# 	print(stu_roll[i])
+# 	i += 1
+#
+# print("Array insert")
+# stu_roll.insert(1, 106)
+# stu_roll.insert(3, 107)
+# n = len(stu_roll)
+# i = 0
+# while i < n:
+# 	print(stu_roll[i])
+# 	i += 1
+#
+# print("Array remove")
+# stu_roll.remove(101)
+# n = len(stu_roll)
+# i = 0
+# while i < n:
+# 	print(stu_roll[i])
+# 	i += 1
+#
+# print("Array pop")
+# stu_roll.pop(2)
+# n = len(stu_roll)
+# i = 0
+# while i < n:
+# 	print(stu_roll[i])
+# 	i += 1
+
+print("array index")
+print(stu_roll.index(103))
+
+print("array extend")
+arr = array('i', [201, 202, 203])
+stu_roll.extend(arr)
 n = len(stu_roll)
 i = 0
 while i < n:
 	print(stu_roll[i])
 	i += 1
 
-print("Array insert")
-stu_roll.insert(1, 106)
-stu_roll.insert(3, 107)
-n = len(stu_roll)
-i = 0
-while i < n:
-	print(stu_roll[i])
-	i += 1
-
-print("Array remove")
-stu_roll.remove(101)
-n = len(stu_roll)
-i = 0
-while i < n:
-	print(stu_roll[i])
-	i += 1
-
-print("Array pop")
-stu_roll.pop(2)
+print("array reverse")
+stu_roll.reverse()
 n = len(stu_roll)
 i = 0
 while i < n:
