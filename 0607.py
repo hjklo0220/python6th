@@ -316,37 +316,71 @@ str3 = '''
 #
 # add(20)
 
-def add():
-	x = 10
-	y = 20
-	z = x + y
-	return z
+# def add():
+# 	x = 10
+# 	y = 20
+# 	z = x + y
+# 	return z
+#
+#
+# print(add())
+#
+#
+# def add():
+# 	x = 10
+# 	y = 20
+# 	return x + y
+#
+#
+# print(add())
+#
+#
+# def add(y):
+# 	x = 10
+# 	return x + y
+#
+#
+# print(add(10))
+#
+# def add(y):
+# 	x = 10
+# 	c = x + y
+# 	d = y - x
+# 	return c, d, 50
+#
+#
+# print(add(20), type(add(20)))
+
+# 중첩 함수
+def disp():
+	def show():
+		print("Show")	# 나중에 출력 (선언만 한거임)
+		return "Show Function"
+	result = show() + "disp Function"
+	print("disp")		# 먼저 출력됨
+	return result
 
 
-print(add())
+print(disp())
+
+def disp(sh):
+	print(type(sh))
+	print("disp function" + sh())	# 파라미터로 함수를 받을 수 있음
 
 
-def add():
-	x = 10
-	y = 20
-	return x + y
+def show():
+	return " show function"
 
 
-print(add())
+disp(show)	# 함수 클래스
+
+def disp():
+	def show():
+		return "show Function"
+
+	print("disp Function")
+	return show		# ()쓰면 실행되기 때문에 그냥 함수 리턴
 
 
-def add(y):
-	x = 10
-	return x + y
-
-
-print(add(10))
-
-def add(y):
-	x = 10
-	c = x + y
-	d = y - x
-	return c, d, 50
-
-
-print(add(20), type(add(20)))
+r_sh = disp()
+print(r_sh(), type(r_sh))
