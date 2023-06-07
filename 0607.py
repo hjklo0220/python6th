@@ -167,7 +167,7 @@
 
 # # 배열 추가 삭제
 from array import *
-stu_roll = array('i', [101, 102, 103, 104, 105])
+stu_roll = array('i', [101, 102, 103, 104, 105, 106, 107])
 # n = len(stu_roll)
 # i = 0
 # while i < n:
@@ -199,22 +199,53 @@ stu_roll = array('i', [101, 102, 103, 104, 105])
 # 	print(stu_roll[i])
 # 	i += 1
 
-print("array index")
-print(stu_roll.index(103))
+# print("array index")
+# print(stu_roll.index(103))
+#
+# print("array extend")
+# arr = array('i', [201, 202, 203])
+# stu_roll.extend(arr)
+# n = len(stu_roll)
+# i = 0
+# while i < n:
+# 	print(stu_roll[i])
+# 	i += 1
+#
+# print("array reverse")
+# stu_roll.reverse()
+# n = len(stu_roll)
+# i = 0
+# while i < n:
+# 	print(stu_roll[i])
+# 	i += 1
 
-print("array extend")
-arr = array('i', [201, 202, 203])
-stu_roll.extend(arr)
-n = len(stu_roll)
-i = 0
-while i < n:
-	print(stu_roll[i])
-	i += 1
 
-print("array reverse")
-stu_roll.reverse()
-n = len(stu_roll)
-i = 0
-while i < n:
-	print(stu_roll[i])
-	i += 1
+print("array slicing")
+print(stu_roll)
+print("인덱스 1~4 까지")
+print(stu_roll[1:5])
+print("0~끝까지")
+print(stu_roll[0:])
+print("처음부터 5번째까지")
+print(stu_roll[:5])
+print("마지막 요소 4개")
+print(stu_roll[-4:])
+print("0부터 6번째 까지 2개씩 건너뛰어")
+print(stu_roll[0:7:2])
+print("마지막 5개 요소중 [-5 - (-3)] = -2 오른쪽으로부터 2개 요소 출력")
+print(stu_roll[-5:-3])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
