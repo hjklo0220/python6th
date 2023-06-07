@@ -291,27 +291,62 @@ str3 = '''
 
 
 # 함수
-def disp():
-	name = "phthon"
-	print("hello", name)
+# def disp():
+# 	name = "phthon"
+# 	print("hello", name)
+#
+#
+# disp()
+# disp()
+# disp()
+#
+#
+# def add(y):
+# 	x = 10
+# 	z = x + y
+# 	print(z)
+#
+#
+# add(20)
+#
+# def add(y):
+# 	x = 10.1234
+# 	print(x + y)
+# 	print(f"Formatted Output:{x + y:6.2f}")	# ":" 명세 하는것 f:float 숫자는 6칸으로 소수2자리까지
+#
+# add(20)
+
+def add():
+	x = 10
+	y = 20
+	z = x + y
+	return z
 
 
-disp()
-disp()
-disp()
+print(add())
+
+
+def add():
+	x = 10
+	y = 20
+	return x + y
+
+
+print(add())
 
 
 def add(y):
 	x = 10
-	z = x + y
-	print(z)
+	return x + y
 
 
-add(20)
+print(add(10))
 
 def add(y):
-	x = 10.1234
-	print(x + y)
-	print(f"Formatted Output:{x + y:6.2f}")	# ":" 명세 하는것 f:float 숫자는 6칸으로 소수2자리까지
+	x = 10
+	c = x + y
+	d = y - x
+	return c, d, 50
 
-add(20)
+
+print(add(20), type(add(20)))
