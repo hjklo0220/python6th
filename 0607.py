@@ -124,15 +124,20 @@
 # 	print(i)
 
 
-# for loop
-st = "hello"
-for ch in st:
-	print(ch)
+# # for loop
+# st = "hello"
+# for ch in st:
+# 	print(ch)
+# else:
+# 	print("else")
+# print("코드 종료")
+
+
+# pass
+a = 5
+if a < 6:
+	pass
 else:
-	print("else")
-print("코드 종료")
-
-
-
+	print("6보다 큼")
 
 
