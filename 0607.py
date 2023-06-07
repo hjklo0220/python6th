@@ -105,24 +105,32 @@
 # print("종료")
 
 
-# range함수
-for i in range(5):
-	print(i)
+# # range함수
+# for i in range(5):
+# 	print(i)
+#
+# for i in range(2, 7):
+# 	print(i)
+#
+# for i in range(1, 10, 2):
+# 	print(i)
+#
+# for i in range(-1, -10, -2):
+# 	print(i)
+#
+# print("Reverse Rage with start, stop, step")
+# r = range(5, 0, -1)
+# for i in r:
+# 	print(i)
 
-for i in range(2, 7):
-	print(i)
 
-for i in range(1, 10, 2):
-	print(i)
-
-for i in range(-1, -10, -2):
-	print(i)
-
-print("Reverse Rage with start, stop, step")
-r = range(5, 0, -1)
-for i in r:
-	print(i)
-
+# for loop
+st = "hello"
+for ch in st:
+	print(ch)
+else:
+	print("else")
+print("코드 종료")
 
 
 
