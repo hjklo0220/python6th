@@ -48,61 +48,83 @@
 # 	print("휴일")
 
 
-# 반복문
+# # 반복문
+#
+# i = 0
+# while i < 10:
+# 	i += 1
+# 	print(i)
+# else:
+# 	print("else")  # while문에 else쓸 수 있음, while문이 끝나면 실행됨
+#
+# while True:
+# 	a = input("Enter Menu Number: ")
+# 	if a == '0':
+# 		break
+# 	print("a: ", a)
+# else:
+# 	print("else")  # break로 나가면 else실행 안됨
+#
+# a = 1
+# while a <= 5:
+# 	print(a)
+# 	a += 1
+# print("코드 종료")
+#
+# a = 2
+# while a <= 10:
+# 	print(a)
+# 	a += 2
+# print("종료")
+#
+# a = 1
+# while a <= 5:
+# 	print(a)
+# 	a += 1
+# else:
+# 	print("while 조건이 거짓이므로 else부분 실행됨")
+# print("종료")
+#
+# # 무한 루프
+# i = 0
+# while True:
+# 	print("test")
+# 	i += 1
+# 	if i == 5:
+# 		break	# 무한루프 탈출
+# print("코드종료")
+#
+# i = 1
+# while i <= 3:
+# 	print("outer Loop", i)
+# 	i += 1
+# 	j = 1
+# 	while j <= 5:
+# 		print("Inner Loop", j)
+# 		j += 1
+# print("종료")
 
-i = 0
-while i < 10:
-	i += 1
+
+# range함수
+for i in range(5):
 	print(i)
-else:
-	print("else")  # while문에 else쓸 수 있음, while문이 끝나면 실행됨
 
-while True:
-	a = input("Enter Menu Number: ")
-	if a == '0':
-		break
-	print("a: ", a)
-else:
-	print("else")  # break로 나가면 else실행 안됨
+for i in range(2, 7):
+	print(i)
 
-a = 1
-while a <= 5:
-	print(a)
-	a += 1
-print("코드 종료")
+for i in range(1, 10, 2):
+	print(i)
 
-a = 2
-while a <= 10:
-	print(a)
-	a += 2
-print("종료")
+for i in range(-1, -10, -2):
+	print(i)
 
-a = 1
-while a <= 5:
-	print(a)
-	a += 1
-else:
-	print("while 조건이 거짓이므로 else부분 실행됨")
-print("종료")
+print("Reverse Rage with start, stop, step")
+r = range(5, 0, -1)
+for i in r:
+	print(i)
 
-# 무한 루프
-i = 0
-while True:
-	print("test")
-	i += 1
-	if i == 5:
-		break	# 무한루프 탈출
-print("코드종료")
 
-i = 1
-while i <= 3:
-	print("outer Loop", i)
-	i += 1
-	j = 1
-	while j <= 5:
-		print("Inner Loop", j)
-		j += 1
-print("종료")
+
 
 
 
