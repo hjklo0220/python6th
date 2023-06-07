@@ -11,38 +11,38 @@
 #
 # score = 50
 # if score >= 90:
-# 	print("A")
+# 	print("a")
 # else:
 # 	if score >= 80:
-# 		print("B")
+# 		print("b")
 # 	else:
 # 		if score >= 70:
-# 			print("C")
+# 			print("c")
 # 		else:
-# 			print("D")
+# 			print("d")
 #
 # marks = 75
 # if marks >= 90:
-# 	print("A")
+# 	print("a")
 # elif marks >= 80:
-# 	print("B")
+# 	print("b")
 # elif marks >= 70:
-# 	print("C")
+# 	print("c")
 # else:
-# 	print("D")
+# 	print("d")
 
-# a = int(input("Enter number Greater then 2 : "))
+# a = int(input("enter number greater then 2 : "))
 # if a >= 2:
-# 	print("Correct! you have entered: ", a)
+# 	print("correct! you have entered: ", a)
 # else:
-# 	print("Wrong! you have entered: ", a)
+# 	print("wrong! you have entered: ", a)
 #
 # day = input('요일을 입력: ')
-# if day == "Mon":
+# if day == "mon":
 # 	print("월요일")
-# elif day == "Tue":
+# elif day == "tue":
 # 	print("화요일")
-# elif day == "Wed":
+# elif day == "wed":
 # 	print("수요일")
 # else:
 # 	print("휴일")
@@ -57,8 +57,8 @@
 # else:
 # 	print("else")  # while문에 else쓸 수 있음, while문이 끝나면 실행됨
 #
-# while True:
-# 	a = input("Enter Menu Number: ")
+# while true:
+# 	a = input("enter menu number: ")
 # 	if a == '0':
 # 		break
 # 	print("a: ", a)
@@ -87,7 +87,7 @@
 #
 # # 무한 루프
 # i = 0
-# while True:
+# while true:
 # 	print("test")
 # 	i += 1
 # 	if i == 5:
@@ -96,11 +96,11 @@
 #
 # i = 1
 # while i <= 3:
-# 	print("outer Loop", i)
+# 	print("outer loop", i)
 # 	i += 1
 # 	j = 1
 # 	while j <= 5:
-# 		print("Inner Loop", j)
+# 		print("inner loop", j)
 # 		j += 1
 # print("종료")
 
@@ -118,7 +118,7 @@
 # for i in range(-1, -10, -2):
 # 	print(i)
 #
-# print("Reverse Rage with start, stop, step")
+# print("reverse rage with start, stop, step")
 # r = range(5, 0, -1)
 # for i in r:
 # 	print(i)
@@ -136,9 +136,9 @@
 # # pass
 # a = 5
 # if a < 6:
-# 	pass  # FIXME test
+# 	pass  # fixme test
 # else:
-# 	print("6보다 큼")	# TODO 작업 진행
+# 	print("6보다 큼")	# todo 작업 진행
 
 
 # # 배열
@@ -167,6 +167,7 @@
 
 # # 배열 추가 삭제
 from array import *
+
 stu_roll = array('i', [101, 102, 103, 104, 105, 106, 107])
 # n = len(stu_roll)
 # i = 0
@@ -174,7 +175,7 @@ stu_roll = array('i', [101, 102, 103, 104, 105, 106, 107])
 # 	print(stu_roll[i])
 # 	i += 1
 #
-# print("Array insert")
+# print("array insert")
 # stu_roll.insert(1, 106)
 # stu_roll.insert(3, 107)
 # n = len(stu_roll)
@@ -183,7 +184,7 @@ stu_roll = array('i', [101, 102, 103, 104, 105, 106, 107])
 # 	print(stu_roll[i])
 # 	i += 1
 #
-# print("Array remove")
+# print("array remove")
 # stu_roll.remove(101)
 # n = len(stu_roll)
 # i = 0
@@ -191,7 +192,7 @@ stu_roll = array('i', [101, 102, 103, 104, 105, 106, 107])
 # 	print(stu_roll[i])
 # 	i += 1
 #
-# print("Array pop")
+# print("array pop")
 # stu_roll.pop(2)
 # n = len(stu_roll)
 # i = 0
@@ -244,23 +245,47 @@ str3 = '''
 		hello
 			python
 '''
-print(str1)
-print(str2)
-print(str3)
+# print(str1)
+# print(str2)
+# print(str3)
+#
+# str4 = "aaa'bb'aa"
+# str5 = 'xxxx"aa"xxx'
+# print(str4)
+# print(str5)
+#
+# str6 = "hello \n bye"
+# str7 = "hello \\n bye"
+# str8 = r"hello \n bye"
+#
+# print(str6)
+# print(str7)
+# print(str8)
 
-str4 = "aaa'bb'aa"
-str5 = 'xxxx"aa"xxx'
-print(str4)
-print(str5)
+# 문자열 함수
+s = "Hello world"
+print(s.upper())  # 모두대문자
+print(s.lower())  # 모두소문자
+print(s.swapcase())  # 대소문자 변경
+print(s.title())  # 맨 앞자만 대문자
+print(s.isupper())  # 모두 대문자면 True
+print(s.islower())  # 모두 소문자면 True
+print(s.istitle())  # 맨앞자 대문자면 True
 
-str6 = "hello \n bye"
-str7 = "hello \\n bye"
-str8 = r"hello \n bye"
+print(s.isdigit())  # 숫자면 True
+print(s.isalpha())  # 알파벳만 있으면 True
 
-print(str6)
-print(str7)
-print(str8)
+print(s.lstrip())	# 왼쪽 공백 제거
+print(s.rstrip())	# 오른쪽 공백 제거
+print(s.strip())	# 양옆 공백 제거
 
+print(s.replace("world", "there"))	# 문자열 변경
+print(s.split(" "))	# 문자열 분리
+split = s.split(" ")
+print(" ".join(split))	# 문자열 합성
+
+print(s.startswith("Hello"))	# 해당문자열이 Hello로 시작하면 True
+print(s.endswith("ld"))	# 문자열이 ld로 끝나는지
 
 
 
