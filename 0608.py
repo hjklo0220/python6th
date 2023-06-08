@@ -230,69 +230,108 @@
 # print(nested_tuple)
 
 
-# set
-
-a = {10, 20, 30}
-a = {10, 20, 30, "hello", 'set', 40}
-
-print(a)  # 중복된 값은 삭제되고 순서없음
-b = set()  # {}이렇게 선언하면 딕셔너리 먼저 찾기 때문에 set함수 써서 생성해야함
-print(b, type(b))
-
-# print(a[0])  # 인덱스 사용 못함(순서 없음)
-a.add(50)
-print(a)
-a.update([1, 2, 3, 4])
-print(a)
-a.remove("hello")  # remove는 요소 못찾으면 에러를 냄
-print(a)
-a.discard("hello") # 있으면 지워주고 없으면 지나감 에러없음, 더많이씀
-print(a)
-
-new_set = a.copy()
-print(new_set)
-new_set.clear()
-print(new_set)
-
-
-# 교집합
-b = {10, 20, 30, 'a', 'b', 'c'}
-intersection_a_b = a.intersection(b)
-print(intersection_a_b)
-
-# 합집합
-union_a_b = a.union(b)
-print(union_a_b)
-
-# 차집합
-difference_a_b = a.difference(b)
-print(difference_a_b)
-
-#부분집합
-c = {1, 2, 3}
-print(c.issubset(a))  # 지정된 셋(a)에 (c)의 값이 모두 포함되어 있으면 true
-print(a.issuperset(c))  # (a)안에 c가 모두 포함되어 있으면 True
-
-# 교집합을 뺀 나머지
-sym_a_b = a.symmetric_difference(b)
-print(sym_a_b)
-
-
+# # set
+#
+# a = {10, 20, 30}
+# a = {10, 20, 30, "hello", 'set', 40}
+#
+# print(a)  # 중복된 값은 삭제되고 순서없음
+# b = set()  # {}이렇게 선언하면 딕셔너리 먼저 찾기 때문에 set함수 써서 생성해야함
+# print(b, type(b))
+#
+# # print(a[0])  # 인덱스 사용 못함(순서 없음)
+# a.add(50)
+# print(a)
+# a.update([1, 2, 3, 4])
+# print(a)
+# a.remove("hello")  # remove는 요소 못찾으면 에러를 냄
+# print(a)
+# a.discard("hello") # 있으면 지워주고 없으면 지나감 에러없음, 더많이씀
+# print(a)
+#
+# new_set = a.copy()
+# print(new_set)
+# new_set.clear()
+# print(new_set)
+#
+#
+# # 교집합
+# b = {10, 20, 30, 'a', 'b', 'c'}
+# intersection_a_b = a.intersection(b)
+# print(intersection_a_b)
+#
+# # 합집합
+# union_a_b = a.union(b)
+# print(union_a_b)
+#
+# # 차집합
+# difference_a_b = a.difference(b)
+# print(difference_a_b)
+#
+# #부분집합
+# c = {1, 2, 3}
+# print(c.issubset(a))  # 지정된 셋(a)에 (c)의 값이 모두 포함되어 있으면 true
+# print(a.issuperset(c))  # (a)안에 c가 모두 포함되어 있으면 True
+#
+# # 교집합을 뺀 나머지
+# sym_a_b = a.symmetric_difference(b)
+# print(sym_a_b)
 
 
+# dictionary
 
+stu = {101: 'A', 102: 'B', 103: 'C'}
+fees = {'A': 2000, 'B': 3000, 'C': 4000}
 
+print(stu[101])
+print(stu[102])
+print(stu[103])
 
+print(fees['A'])
+print(fees['B'])
+print(fees['C'])
 
+stu[102] = 'Python'  # 값 변경 가능
+print(stu)
 
+stu[104] = 'D'  # 값 추가
+print(stu)
 
+del stu[102]  # 값 제거
+print(stu)
 
+print(102 in stu)  # in, not in연산자 가능
+print(102 not in stu)
 
+# stu.clear()  # 전부 제거
+# print(stu)
 
+# new_stu = stu.copy()  # 복사
 
+key = (101, 102, 103)  # 키를 튜플로
+value = "test"
+new_stu = dict.fromkeys(key, value)
+print(new_stu)
 
+print(stu[101])
+print(stu.get(101))  # 위와 똑같
 
+print(stu.items(), type(stu.items()))
+print(stu.keys(), type(stu.keys()))
+print(stu.values())
+stu.update({105: "test"})
+print(stu)
+stu.pop(104)  # 키값으로 지울 수 있음
+print(stu)
+print(stu.pop(104, 'No value')) # 값이 없을때를 위해 디폴트 줄수 있음
 
+# set default
+stu.setdefault(104, 'apple')  # 값이 없을때만 그 값을 지정해 줌
+print(stu)
+
+print(stu.popitem())  # 순서는 없지만 추가한 넣은 순서대로 pop됨
+print(stu.popitem())
+print(stu.popitem())
 
 
 
