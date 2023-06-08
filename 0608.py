@@ -371,20 +371,47 @@
 #
 # myfunc()
 
-# 익명 함수
-show = lambda x: print(x)
+# # 익명 함수
+# show = lambda x: print(x)
+#
+# show(5)
+#
+# add = lambda x, y: (x + y)
+#
+# print(add(5, 2))
+#
+# add_sub = lambda x, y: (x + y, x - y)
+# a, s = add_sub(5, 2)
+#
+# print(a)
+# print(s)
+#
+# add = lambda x, y=3: (x + y)
+# print(add(5))
 
-show(5)
 
-add = lambda x, y: (x + y)
+# 데코레이트
+def decor(func):
+	def inner():
+		a = func()
+		add = a + 5
+		return add
+	return inner
 
-print(add(5, 2))
+def num():
+	return 10
 
-add_sub = lambda x, y: (x + y, x - y)
-a, s = add_sub(5, 2)
+result_func = decor(num)
 
-print(a)
-print(s)
+print(result_func())
 
-add = lambda x, y=3: (x + y)
-print(add(5))
+
+@decor
+def num():
+	return 10
+
+
+print(num())
+
+
+
