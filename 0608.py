@@ -184,51 +184,72 @@
 # 	print(letter)
 
 
-# 튜플
+# # 튜플
+#
+# b = (10)  # 값이 하나면 int로 되버림
+# c = (10,)
+# print(b, type(b))
+# print(c, type(c))
+#
+# d = (10, 20, 30, 40)
+# e = (10, 20, -50, 3.14, "hello")
+# f = 10, 20, -50, 3.14, "hello"  # 괄호 생략 가능
+#
+# print(d, type(d))
+# print(e, type(e))
+# print(f, type(f))
+#
+# print(f[:3])  # 슬라이스 가능
+# print(f[1:4])
+#
+# print(c + d)
+# print(d * 3)
+# print(-10 in f)
+#
+# h = (10, 20, 50, -60, 10, 30, 10)
+# print(min(h), max(h))
+# print(h.count(10))
+# print(h.index(10))
+# sorted_a = sorted(h)
+# print(sorted_a)
+#
+# a = (10, 20, -50)
+# x, y, z = a  # 언패킹, 갯수 일치하면 꺼낼수 있음
+# print(x, y, z)
+#
+# a = 1
+# b = 2
+#
+# a, b = b, a
+#
+# print(a, b)
+#
+# print(list(h), type(list(h)))
+#
+# nested_tuple = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+# print(nested_tuple)
 
-b = (10)  # 값이 하나면 int로 되버림
-c = (10,)
+
+# set
+
+a = {10, 20, 30}
+a = {10, 20, 30, "hello", 'set', 40}
+
+print(a)  # 중복된 값은 삭제되고 순서없음
+b = set()  # {}이렇게 선언하면 딕셔너리 먼저 찾기 때문에 set함수 써서 생성해야함
 print(b, type(b))
-print(c, type(c))
 
-d = (10, 20, 30, 40)
-e = (10, 20, -50, 3.14, "hello")
-f = 10, 20, -50, 3.14, "hello"  # 괄호 생략 가능
+# print(a[0])  # 인덱스 사용 못함(순서 없음)
+a.add(50)
+print(a)
+a.update([1, 2, 3, 4])
+print(a)
+a.remove("hello")  # remove는 요소 못찾으면 에러를 냄
+print(a)
+a.discard("hello") # 있으면 지워주고 없으면 지나감 에러없음, 더많이씀
+print(a)
 
-print(d, type(d))
-print(e, type(e))
-print(f, type(f))
-
-print(f[:3])  # 슬라이스 가능
-print(f[1:4])
-
-print(c + d)
-print(d * 3)
-print(-10 in f)
-
-h = (10, 20, 50, -60, 10, 30, 10)
-print(min(h), max(h))
-print(h.count(10))
-print(h.index(10))
-sorted_a = sorted(h)
-print(sorted_a)
-
-a = (10, 20, -50)
-x, y, z = a  # 언패킹, 갯수 일치하면 꺼낼수 있음
-print(x, y, z)
-
-a = 1
-b = 2
-
-a, b = b, a
-
-print(a, b)
-
-print(list(h), type(list(h)))
-
-nested_tuple = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
-print(nested_tuple)
-
-
-
-
+new_set = a.copy()
+print(new_set)
+new_set.clear()
+print(new_set)
