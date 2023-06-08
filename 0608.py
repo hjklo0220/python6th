@@ -153,17 +153,38 @@
 
 # 제네레이터
 
-def fibonacci(n):
-	a, b = 0, 1
-	for _ in range(n):
-		yield a
-		a, b = b, a + b
+# def fibonacci(n):
+# 	a, b = 0, 1
+# 	for _ in range(n):
+# 		yield a
+# 		a, b = b, a + b
+#
+#
+# runner = fibonacci(10)
+#
+# print(runner)
+# print(next(runner))
+#
+# for num in runner:
+# 	print(num)
 
 
-runner = fibonacci(10)
+def generate_alpha(start_letter, end_letter):
+	start = ord(start_letter)
+	end = ord(end_letter)
+	while start <= end:
+		yield chr(start)
+		start += 1
 
-print(runner)
-print(next(runner))
 
-for num in runner:
-	print(num)
+runner = generate_alpha('A', 'F')
+
+print(type(runner))
+for letter in runner:
+	print(letter)
+
+
+
+
+
+
