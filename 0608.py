@@ -278,67 +278,84 @@
 # print(sym_a_b)
 
 
-# dictionary
-
-stu = {101: 'A', 102: 'B', 103: 'C'}
-fees = {'A': 2000, 'B': 3000, 'C': 4000}
-
-print(stu[101])
-print(stu[102])
-print(stu[103])
-
-print(fees['A'])
-print(fees['B'])
-print(fees['C'])
-
-stu[102] = 'Python'  # 값 변경 가능
-print(stu)
-
-stu[104] = 'D'  # 값 추가
-print(stu)
-
-del stu[102]  # 값 제거
-print(stu)
-
-print(102 in stu)  # in, not in연산자 가능
-print(102 not in stu)
-
-# stu.clear()  # 전부 제거
+# # dictionary
+#
+# stu = {101: 'A', 102: 'B', 103: 'C'}
+# fees = {'A': 2000, 'B': 3000, 'C': 4000}
+#
+# print(stu[101])
+# print(stu[102])
+# print(stu[103])
+#
+# print(fees['A'])
+# print(fees['B'])
+# print(fees['C'])
+#
+# stu[102] = 'Python'  # 값 변경 가능
 # print(stu)
+#
+# stu[104] = 'D'  # 값 추가
+# print(stu)
+#
+# del stu[102]  # 값 제거
+# print(stu)
+#
+# print(102 in stu)  # in, not in연산자 가능
+# print(102 not in stu)
+#
+# # stu.clear()  # 전부 제거
+# # print(stu)
+#
+# # new_stu = stu.copy()  # 복사
+#
+# key = (101, 102, 103)  # 키를 튜플로
+# value = "test"
+# new_stu = dict.fromkeys(key, value)
+# print(new_stu)
+#
+# print(stu[101])
+# print(stu.get(101))  # 위와 똑같
+#
+# print(stu.items(), type(stu.items()))
+# print(stu.keys(), type(stu.keys()))
+# print(stu.values())
+# stu.update({105: "test"})
+# print(stu)
+# stu.pop(104)  # 키값으로 지울 수 있음
+# print(stu)
+# print(stu.pop(104, 'No value')) # 값이 없을때를 위해 디폴트 줄수 있음
+#
+# # set default
+# stu.setdefault(104, 'apple')  # 값이 없을때만 그 값을 지정해 줌
+# print(stu)
+#
+# print(stu.popitem())  # 순서는 없지만 추가한 넣은 순서대로 pop
+# print(stu.popitem())
+# print(stu.popitem())
 
-# new_stu = stu.copy()  # 복사
 
-key = (101, 102, 103)  # 키를 튜플로
-value = "test"
-new_stu = dict.fromkeys(key, value)
-print(new_stu)
+# call by reference, 참조를 이용한 함수 호출
+def val(lst):
+	print("Inside Function Before append: ", lst, id(lst))
+	lst.append(4)
+	print("Inside Function After append: ", lst, id(lst))
 
-print(stu[101])
-print(stu.get(101))  # 위와 똑같
+list = [1, 2, 3]
+print("Before Calling Function: ", list, id(list))
+val(list)
+print("After Calling Function: ", list, id(list))  # append한 그대로임
 
-print(stu.items(), type(stu.items()))
-print(stu.keys(), type(stu.keys()))
-print(stu.values())
-stu.update({105: "test"})
-print(stu)
-stu.pop(104)  # 키값으로 지울 수 있음
-print(stu)
-print(stu.pop(104, 'No value')) # 값이 없을때를 위해 디폴트 줄수 있음
+print("==========")
+# call by value,
+def val(x):
+	print("inside : ", x, id(x))
+	x += 1
+	print("inside add: ", x, id(x))
 
-# set default
-stu.setdefault(104, 'apple')  # 값이 없을때만 그 값을 지정해 줌
-print(stu)
-
-print(stu.popitem())  # 순서는 없지만 추가한 넣은 순서대로 pop됨
-print(stu.popitem())
-print(stu.popitem())
-
-
-
-
-
-
-
+a = 10
+print("befaoce calling: ", a, id(a))
+val(a)
+print("after calling", a, id(a))
 
 
 
