@@ -51,26 +51,69 @@
 # add(3, a=5, b=2, c=4, d=5)
 
 
-# 전역변수
-a = 50
+# # 전역변수
+# a = 50
+#
+#
+# def show():
+# 	x = 10
+# 	print("x: ", x)  # local
+# 	print("a: ", a)  # global
+#
+#
+# show()
+#
+# print("Grobal Variable a: ", a)
+# i = 0
+#
+#
+# def myfunc():
+# 	a = i + 1
+# 	print("my func a: ", a)
+#
+#
+# myfunc()
+# print("Grobal Variable a:", a)
 
 
-def show():
-	x = 10
-	print("x: ", x)  # local
-	print("a: ", a)  # global
+# i = 0
+#
+# def myfunc():
+# 	i = i+1		# UnboundLocalError: local variable 'i' referenced before assignment
+# 	print("my func i: ", i)
+#
+# myfunc()
 
 
-show()
+# a = 50
+# def show():
+# 	a = 10
+# 	print("show a: ", a)
+#
+# show()
+# print("a: ", a)
+#
+# def show2():
+# 	global a		# 명확하게 글로벌 변수 지정
+# 	print('show2 a:', a)
+# 	a = 20
+# 	print('show2 a2: ',a)
+#
+# show2()
+# print("a: ", a)		# 함수가 끝나도 값변경 그대로 적용
 
-print("Grobal Variable a: ", a)
-i = 0
 
+# 리스트
 
-def myfunc():
-	a = i + 1
-	print("my func a: ", a)
-
-
-myfunc()
-print("Grobal Variable a:", a)
+fruits = ['apple', 'banana', 'cherry', 'ornage']
+print(fruits)
+fruits.append("grape")
+print(fruits)
+fruits.insert(2, "kiwi")
+print(fruits.pop())
+print(fruits)
+print("cherry index: ", fruits.index("cherry"))
+fruits.remove("cherry")  # 동일한 값이면 첫번째것만 지워짐
+print(fruits)
+fruits.reverse()
+print(fruits)
