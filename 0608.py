@@ -169,21 +169,65 @@
 # 	print(num)
 
 
-def generate_alpha(start_letter, end_letter):
-	start = ord(start_letter)
-	end = ord(end_letter)
-	while start <= end:
-		yield chr(start)
-		start += 1
+# def generate_alpha(start_letter, end_letter):
+# 	start = ord(start_letter)
+# 	end = ord(end_letter)
+# 	while start <= end:
+# 		yield chr(start)
+# 		start += 1
+#
+#
+# runner = generate_alpha('A', 'F')
+#
+# print(type(runner))
+# for letter in runner:
+# 	print(letter)
 
 
-runner = generate_alpha('A', 'F')
+# 튜플
 
-print(type(runner))
-for letter in runner:
-	print(letter)
+b = (10)  # 값이 하나면 int로 되버림
+c = (10,)
+print(b, type(b))
+print(c, type(c))
 
+d = (10, 20, 30, 40)
+e = (10, 20, -50, 3.14, "hello")
+f = 10, 20, -50, 3.14, "hello"  # 괄호 생략 가능
 
+print(d, type(d))
+print(e, type(e))
+print(f, type(f))
+
+print(f[:3])  # 슬라이스 가능
+print(f[1:4])
+
+print(c + d)
+print(d * 3)
+print(-10 in f)
+
+h = (10, 20, 50, -60, 10, 30, 10)
+print(min(h), max(h))
+print(h.count(10))
+print(h.index(10))
+sorted_a = sorted(h)
+print(sorted_a)
+
+a = (10, 20, -50)
+x, y, z = a  # 언패킹, 갯수 일치하면 꺼낼수 있음
+print(x, y, z)
+
+a = 1
+b = 2
+
+a, b = b, a
+
+print(a, b)
+
+print(list(h), type(list(h)))
+
+nested_tuple = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+print(nested_tuple)
 
 
 
