@@ -104,16 +104,66 @@
 
 
 # 리스트
+#
+# fruits = ['apple', 'banana', 'cherry', 'ornage']
+# print(fruits)
+# fruits.append("grape")
+# print(fruits)
+# fruits.insert(2, "kiwi")
+# print(fruits.pop())
+# print(fruits)
+# print("cherry index: ", fruits.index("cherry"))
+# fruits.remove("cherry")  # 동일한 값이면 첫번째것만 지워짐
+# print(fruits)
+# fruits.reverse()
+# print(fruits)
 
-fruits = ['apple', 'banana', 'cherry', 'ornage']
-print(fruits)
-fruits.append("grape")
-print(fruits)
-fruits.insert(2, "kiwi")
-print(fruits.pop())
-print(fruits)
-print("cherry index: ", fruits.index("cherry"))
-fruits.remove("cherry")  # 동일한 값이면 첫번째것만 지워짐
-print(fruits)
-fruits.reverse()
-print(fruits)
+
+# fruits = ['apple', 'banana', 'cherry', 'ornage']
+# vegetables = ["carrot", "cucumber"]
+#
+# grocery = fruits + vegetables
+# print(grocery)
+#
+# numbers = [10, 5, 8, 1, 7]
+# numbers.sort()  # 오름차순 정렬
+# print(numbers)
+#
+# slice_numbers = numbers[1:4]
+# print(slice_numbers)
+#
+# alias_numbers = numbers		# 이렇게 변수에 넣어서 쓰는것은 복사가 아님, 값 바뀌면 실제 numbers도 변경됨
+# print(alias_numbers)
+#
+# copy_numbers = numbers.copy()
+# print(copy_numbers)
+#
+# clone_numbers = numbers[:]
+# print(clone_numbers)
+
+
+# # 사용자 입력으로 리스트
+# user_input_list = []
+# num_elements = int(input("Enter number of element:"))
+# for i in range(num_elements):
+# 	user_input_list.append(input("Enter element:"))
+#
+# print("user input list:", user_input_list)
+
+
+# 제네레이터
+
+def fibonacci(n):
+	a, b = 0, 1
+	for _ in range(n):
+		yield a
+		a, b = b, a + b
+
+
+runner = fibonacci(10)
+
+print(runner)
+print(next(runner))
+
+for num in runner:
+	print(num)
