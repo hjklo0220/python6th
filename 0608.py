@@ -390,28 +390,45 @@
 # print(add(5))
 
 
-# 데코레이트
-def decor(func):
-	def inner():
-		a = func()
-		add = a + 5
-		return add
-	return inner
+# # 데코레이트
+# def decor(func):
+# 	def inner():
+# 		a = func()
+# 		add = a + 5
+# 		return add
+# 	return inner
+#
+# def num():
+# 	return 10
+#
+# result_func = decor(num)
+#
+# print(result_func())
+#
+#
+# @decor
+# def num():
+# 	return 10
+#
+#
+# print(num())
 
-def num():
-	return 10
-
-result_func = decor(num)
-
-print(result_func())
 
 
-@decor
-def num():
-	return 10
+from array import *
+
+def show(ar):
+	print("passed array ar: ", ar)
+	print(type(ar))
+	for i in ar:
+		print(i)
+	return ar
 
 
-print(num())
-
-
-
+print()
+a = array('i', [101, 102, 103, 104])
+y = show(a)
+print("return array Y :", y)
+print(type(y))
+for i in y:
+	print(i)
