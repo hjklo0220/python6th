@@ -334,33 +334,42 @@
 # print(stu.popitem())
 
 
-# call by reference, 참조를 이용한 함수 호출
-def val(lst):
-	print("Inside Function Before append: ", lst, id(lst))
-	lst.append(4)
-	print("Inside Function After append: ", lst, id(lst))
-
-list = [1, 2, 3]
-print("Before Calling Function: ", list, id(list))
-val(list)
-print("After Calling Function: ", list, id(list))  # append한 그대로임
-
-print("==========")
-# call by value,
-def val(x):
-	print("inside : ", x, id(x))
-	x += 1
-	print("inside add: ", x, id(x))
-
-a = 10
-print("befaoce calling: ", a, id(a))
-val(a)
-print("after calling", a, id(a))
-
-
+# # call by reference, 참조를 이용한 함수 호출
+# def val(lst):
+# 	print("Inside Function Before append: ", lst, id(lst))
+# 	lst.append(4)
+# 	print("Inside Function After append: ", lst, id(lst))
+#
+# list = [1, 2, 3]
+# print("Before Calling Function: ", list, id(list))
+# val(list)
+# print("After Calling Function: ", list, id(list))  # append한 그대로임
+#
+# print("==========")
+# # call by value,
+# def val(x):
+# 	print("inside : ", x, id(x))
+# 	x += 1
+# 	print("inside add: ", x, id(x))
+#
+# a = 10
+# print("befaoce calling: ", a, id(a))
+# val(a)
+# print("after calling", a, id(a))
 
 
+# 재귀
+import sys
+print("default: ", sys.getrecursionlimit())
+sys.setrecursionlimit(3000)
+i = 0
+def myfunc():
+	global i
+	i += 1
+	print("myfunc: ", i)
+	myfunc()
 
+myfunc()
 
 
 
