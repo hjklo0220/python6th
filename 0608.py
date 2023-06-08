@@ -253,3 +253,59 @@ new_set = a.copy()
 print(new_set)
 new_set.clear()
 print(new_set)
+
+
+# 교집합
+b = {10, 20, 30, 'a', 'b', 'c'}
+intersection_a_b = a.intersection(b)
+print(intersection_a_b)
+
+# 합집합
+union_a_b = a.union(b)
+print(union_a_b)
+
+# 차집합
+difference_a_b = a.difference(b)
+print(difference_a_b)
+
+#부분집합
+c = {1, 2, 3}
+print(c.issubset(a))  # 지정된 셋(a)에 (c)의 값이 모두 포함되어 있으면 true
+print(a.issuperset(c))  # (a)안에 c가 모두 포함되어 있으면 True
+
+# 교집합을 뺀 나머지
+sym_a_b = a.symmetric_difference(b)
+print(sym_a_b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
