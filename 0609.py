@@ -180,15 +180,31 @@ import time
 # 	'''
 # 	file_object.write(content)
 
-# readlines()
-with open('example.txt', 'r+') as file_object:
-	lines = file_object.readlines()
-	for line in lines:
-		print('>', line.strip())
+# # readlines()
+# with open('example.txt', 'r+') as file_object:
+# 	lines = file_object.readlines()
+# 	for line in lines:
+# 		print('>', line.strip())
 
 
+# 파일이 존재하는지 확인
+import os
+
+filename = 'example.txt'
+
+if os.path.isfile(filename):
+	print(f"{filename}이 존재")
+else:
+	print(f"{filename}이 없음")
 
 
+with open('list_example.txt', 'w') as file_object:
+
+	content_list = ['Python', 'java', 'c++', 'javascript']
+
+	for i in content_list:
+		file_object.write(i + '\n')
+		print(file_object.tell())
 
 
 
