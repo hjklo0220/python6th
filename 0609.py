@@ -187,39 +187,57 @@ import time
 # 		print('>', line.strip())
 
 
-# 파일이 존재하는지 확인
+# # 파일이 존재하는지 확인
+# import os
+#
+# filename = 'example.txt'
+#
+# if os.path.isfile(filename):
+# 	print(f"{filename}이 존재")
+# else:
+# 	print(f"{filename}이 없음")
+#
+#
+# with open('list_example.txt', 'w') as file_object:
+#
+# 	content_list = ['Python', 'java', 'c++', 'javascript']
+#
+# 	for i in content_list:
+# 		file_object.write(i + '\n')
+# 		print(file_object.tell())
+
+
+# directory
+
 import os
 
-filename = 'example.txt'
+current_dir = os.getcwd()
+print(current_dir)
 
-if os.path.isfile(filename):
-	print(f"{filename}이 존재")
-else:
-	print(f"{filename}이 없음")
+os.mkdir("test_dir")  # 중복실행 안됨 FileExistsError: [Errno 17] File exists: 'test_dir'
 
+os.makedirs("parent_dir/child_dir/grandchild_dir2")
 
-with open('list_example.txt', 'w') as file_object:
+os.chdir('test_dir')
+print(os.getcwd(), type(os.getcwd()))
 
-	content_list = ['Python', 'java', 'c++', 'javascript']
+with open('example.txt', 'w') as file_object:
+	file_object.write("hello")
 
-	for i in content_list:
-		file_object.write(i + '\n')
-		print(file_object.tell())
+# 디렉토르 이름 변경
+os.rename("test_dir", 'new_dir')
 
+# 디렉토리 삭제
 
+os.rmdir('new_dir')
 
-
-
-
-
-
+os.removedirs('') # 다중 디렉토리 삭제
 
 
+os.makedirs("parent_dir/child_dir/grandchild_dir")
 
-
-
-
-
-
-
+for dirpath, dirnames, filenames in os.walk('parent_dir'):  # 디렉토리 탐색
+	print(f"디렉토리 경로 : {dirpath}")
+	print(f"디렉토리 이름 : {dirnames}")
+	print(f"파일이름 : {filenames}")
 
