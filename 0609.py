@@ -146,9 +146,25 @@ import time
 # file_object.close()
 
 # 쓰기
-file_object = open('new_example.txt', 'w')
-content = "This is a new file \n Python is fun"
+# file_object = open('new_example.txt', 'w')
+# content = "This is a new file \n Python is fun"
+#
+# file_object.write(content)
+#
+# file_object.close()
 
-file_object.write(content)
+
+# 파일 열기
+file_object = open('example.txt', 'r')
+
+print("현재 파일 위치 확인")
+position = file_object.tell()
+print("Current position : ", position)
+
+print("파일 포인터 위치 변경")
+file_object.seek(7)
+
+position = file_object.tell()
+print("변경된 위치 : ", position)
 
 file_object.close()
