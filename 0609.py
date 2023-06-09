@@ -76,28 +76,28 @@ import time
 # current_date = date.today()
 # print(current_date)
 
-from datetime import timedelta
-
-td = timedelta(days=10)
-print(td)
-
-from datetime import date
-
-d1 = date(year=2023, month=5, day=5)
-d2 = date(year=2023, month=6, day=9)
-
-# 날짜의 연산자 오버로딩으로 비교가능
-print(d1 == d2)
-print(d1 < d2)
-print(d1 > d2)
-
-from datetime import datetime
-
-dt = datetime.today()
-
-formated_datetime = dt.strftime('%B, %d, %Y')  # 포멧코드로 포멧팅한 문자를 만들어주는 메소드
-print(formated_datetime)
-
+# from datetime import timedelta
+#
+# td = timedelta(days=10)
+# print(td)
+#
+# from datetime import date
+#
+# d1 = date(year=2023, month=5, day=5)
+# d2 = date(year=2023, month=6, day=9)
+#
+# # 날짜의 연산자 오버로딩으로 비교가능
+# print(d1 == d2)
+# print(d1 < d2)
+# print(d1 > d2)
+#
+# from datetime import datetime
+#
+# dt = datetime.today()
+#
+# formated_datetime = dt.strftime('%B, %d, %Y')  # 포멧코드로 포멧팅한 문자를 만들어주는 메소
+# print(formated_datetime)
+#
 # class ParentClass:
 #
 # 	def __init__(self):
@@ -114,7 +114,7 @@ print(formated_datetime)
 #
 # class ChildCloass(ParentClass):
 # 	def __init__(self):
-# 		super().__init__()  # super은 부모클래스를 의미함
+# 		super().__init__()  # super은 부모클래스를 의미함,
 # 		self.name = "child"
 #
 # 	def __str__(self):
@@ -135,4 +135,14 @@ print(formated_datetime)
 # child.add_num(7)
 # print(parent)
 # print(child)
+
+# 파일
+
+file_object = open("example.txt", "r")
+content = file_object.read()
+print(file_object)
+print(content)
+
+file_object.close()
+
 
