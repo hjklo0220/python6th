@@ -27,6 +27,8 @@
 # print(redme.fp)
 # print(geek.fp)
 import time
+
+
 # # 메소드 오버라이딩
 #
 # class Vector(object):
@@ -58,44 +60,58 @@ import time
 # print(time.time())
 # print(time.ctime())
 
-from datetime import datetime
-from datetime import date
-
-dt = datetime(year=2023, month=5, day=5, hour=10, minute=30)
-print(dt, type(dt))
-
-current_time = time.ctime()
-current_datetime = datetime.now()
-print(current_time, current_datetime)  # 날짜 시간 전부
-
-d = date(year=2023, month=6, day=25)
-print(d)  # 날짜만
-
-current_date = date.today()
-print(current_date)
-
-
+# from datetime import datetime
+# from datetime import date
+#
+# dt = datetime(year=2023, month=5, day=5, hour=10, minute=30)
+# print(dt, type(dt))
+#
+# current_time = time.ctime()
+# current_datetime = datetime.now()
+# print(current_time, current_datetime)  # 날짜 시간 전부
+#
+# d = date(year=2023, month=6, day=25)
+# print(d)  # 날짜만
+#
+# current_date = date.today()
+# print(current_date)
 
 
+class ParentClass:
+
+	def __init__(self):
+		self.name = 'parent'
+		self.number = 10
+
+	def __str__(self):
+		return f"ParentClass name : {self.name}, number : {self.number}"
+
+	def add_num(self, new_number):
+		print('부모 : ', new_number, '만큼 더해라')
+		self.number = self.number + new_number
 
 
+class ChildCloass(ParentClass):
+	def __init__(self):
+		super().__init__()  # super은 부모클래스를 의미함
+		self.name = "child"
+
+	def __str__(self):
+		return f"ChildClass name : {self.name}, number : {self.number}"
+
+	def add_num(self, new_number):
+		print("말 안듣는 자식: 고정적으로 5더할거임")
+		self.number = self.number + 5
 
 
+parent = ParentClass()
+child = ChildCloass()
+print(parent)
+print(child)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(" + 7")
+parent.add_num(7)
+child.add_num(7)
+print(parent)
+print(child)
 
