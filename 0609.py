@@ -76,42 +76,63 @@ import time
 # current_date = date.today()
 # print(current_date)
 
+from datetime import timedelta
 
-class ParentClass:
+td = timedelta(days=10)
+print(td)
 
-	def __init__(self):
-		self.name = 'parent'
-		self.number = 10
+from datetime import date
 
-	def __str__(self):
-		return f"ParentClass name : {self.name}, number : {self.number}"
+d1 = date(year=2023, month=5, day=5)
+d2 = date(year=2023, month=6, day=9)
 
-	def add_num(self, new_number):
-		print('부모 : ', new_number, '만큼 더해라')
-		self.number = self.number + new_number
+# 날짜의 연산자 오버로딩으로 비교가능
+print(d1 == d2)
+print(d1 < d2)
+print(d1 > d2)
 
+from datetime import datetime
 
-class ChildCloass(ParentClass):
-	def __init__(self):
-		super().__init__()  # super은 부모클래스를 의미함
-		self.name = "child"
+dt = datetime.today()
 
-	def __str__(self):
-		return f"ChildClass name : {self.name}, number : {self.number}"
+formated_datetime = dt.strftime('%B, %d, %Y')  # 포멧코드로 포멧팅한 문자를 만들어주는 메소드
+print(formated_datetime)
 
-	def add_num(self, new_number):
-		print("말 안듣는 자식: 고정적으로 5더할거임")
-		self.number = self.number + 5
-
-
-parent = ParentClass()
-child = ChildCloass()
-print(parent)
-print(child)
-
-print(" + 7")
-parent.add_num(7)
-child.add_num(7)
-print(parent)
-print(child)
+# class ParentClass:
+#
+# 	def __init__(self):
+# 		self.name = 'parent'
+# 		self.number = 10
+#
+# 	def __str__(self):
+# 		return f"ParentClass name : {self.name}, number : {self.number}"
+#
+# 	def add_num(self, new_number):
+# 		print('부모 : ', new_number, '만큼 더해라')
+# 		self.number = self.number + new_number
+#
+#
+# class ChildCloass(ParentClass):
+# 	def __init__(self):
+# 		super().__init__()  # super은 부모클래스를 의미함
+# 		self.name = "child"
+#
+# 	def __str__(self):
+# 		return f"ChildClass name : {self.name}, number : {self.number}"
+#
+# 	def add_num(self, new_number):
+# 		print("말 안듣는 자식: 고정적으로 5더할거임")
+# 		self.number = self.number + 5
+#
+#
+# parent = ParentClass()
+# child = ChildCloass()
+# print(parent)
+# print(child)
+#
+# print(" + 7")
+# parent.add_num(7)
+# child.add_num(7)
+# print(parent)
+# print(child)
 
