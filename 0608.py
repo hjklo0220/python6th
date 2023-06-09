@@ -412,23 +412,42 @@
 #
 #
 # print(num())
+def sub(func):
+	def inner(*n):
+		a = func(*n) - 1
+		return a
+	return inner
+
+def mul(func):
+	def inner(*n):
+		b = func(*n) * 2
+		return b
+	return inner
+
+@mul
+@sub
+def add(*n):
+	return sum(n)
+
+print(add(5, 5, 5, 5))
 
 
 
-from array import *
 
-def show(ar):
-	print("passed array ar: ", ar)
-	print(type(ar))
-	for i in ar:
-		print(i)
-	return ar
-
-
-print()
-a = array('i', [101, 102, 103, 104])
-y = show(a)
-print("return array Y :", y)
-print(type(y))
-for i in y:
-	print(i)
+# from array import *
+#
+# def show(ar):
+# 	print("passed array ar: ", ar)
+# 	print(type(ar))
+# 	for i in ar:
+# 		print(i)
+# 	return ar
+#
+#
+# print()
+# a = array('i', [101, 102, 103, 104])
+# y = show(a)
+# print("return array Y :", y)
+# print(type(y))
+# for i in y:
+# 	print(i)
