@@ -114,23 +114,26 @@
 # 	print(f"Error: {e.message}")
 
 
-# enumerate
-# 인덱스와 함께 출력하는 방법 3가지
-a = ['a1', 'a2', 'a3']
+# # enumerate
+# # 인덱스와 함께 출력하는 방법 3가지
+# a = ['a1', 'a2', 'a3']
+#
+# for i in range(len(a)):
+# 	print(i, a[i])
+#
+# print("=========")
+#
+# i = 0
+# for v in a:
+# 	print(i, v)
+# 	i += 1
+#
+# print("=========")
+#
+# for i, v in enumerate(a):
+# 	print(i, v)
 
-for i in range(len(a)):
-	print(i, a[i])
 
-print("=========")
+import pprint
 
-i = 0
-for v in a:
-	print(i, v)
-	i += 1
-
-print("=========")
-
-for i, v in enumerate(a):
-	print(i, v)
-
-
+pprint.pprint(locals())
