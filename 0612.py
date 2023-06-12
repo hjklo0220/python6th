@@ -52,25 +52,35 @@
 # print(my_car.start_engine())
 
 
-# 다중 상속
+# # 다중 상속
+#
+# class Engine:
+# 	def start(self):
+# 		return "Engine started"
+#
+# 	def stop(self):
+# 		return "Engine stopped"
+#
+# class Wheels:
+# 	def rotate(self):
+# 		return "Wheels are rotating"
+#
+# class Car(Engine, Wheels):
+# 	def a(self):
+# 		return super().start()
+#
+# my_car = Car()
+#
+# print(my_car.start())
+# print(my_car.rotate())
+# print(my_car.a())
 
-class Engine:
-	def start(self):
-		return "Engine started"
 
-	def stop(self):
-		return "Engine stopped"
+# 패키지
 
-class Wheels:
-	def rotate(self):
-		return "Wheels are rotating"
+from MyApp.Handlers.text_handler import handle_text
 
-class Car(Engine, Wheels):
-	def a(self):
-		return super().start()
+input_text = "python package practice"
+handle_text(input_text)
 
-my_car = Car()
 
-print(my_car.start())
-print(my_car.rotate())
-print(my_car.a())
