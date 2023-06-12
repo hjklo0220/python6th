@@ -76,11 +76,28 @@
 # print(my_car.a())
 
 
-# 패키지
+# # 패키지
+#
+# from MyApp.Handlers.text_handler import handle_text
+#
+# input_text = "python package practice"
+# handle_text(input_text)
 
-from MyApp.Handlers.text_handler import handle_text
 
-input_text = "python package practice"
-handle_text(input_text)
+# # 에러 핸들링
+# try:
+# 	result = 10 / 0
+# except ZeroDivisionError:
+# 	print("Error: Division by zero")
+#
+# print('program continues')
 
+# 예외가 하나가 아닌 경우
 
+try:
+	number = 5 + "Not a number"
+	# number = int("Not a number")
+except ValueError:
+	print("error: Invalid value")
+except TypeError:
+	print("error: Invalid type")
