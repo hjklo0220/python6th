@@ -30,26 +30,47 @@
 # print(my_car.stop())
 
 
-# 부모 클래스
-class Vehicle:
-	def __init__(self, make, model, year):
-		self.make = make
-		self.model = model
-		self.year = year
+# # 부모 클래스
+# class Vehicle:
+# 	def __init__(self, make, model, year):
+# 		self.make = make
+# 		self.model = model
+# 		self.year = year
+#
+# 	def start_engine(self):
+# 		return "the engine is running"
+#
+#
+# class Car(Vehicle):
+# 	def start_engine(self):
+# 		return super().start_engine() + f" It's a {self.make} car engine"
+#
+#
+# #인스턴스 생성
+# my_car = Car("kia", "k3", "2023")
+#
+# print(my_car.start_engine())
 
-	def start_engine(self):
-		return "the engine is running"
 
+# 다중 상속
 
-class Car(Vehicle):
-	def start_engine(self):
-		return super().start_engine() + f" It's a {self.make} car engine"
+class Engine:
+	def start(self):
+		return "Engine started"
 
+	def stop(self):
+		return "Engine stopped"
 
-#인스턴스 생성
-my_car = Car("kia", "k3", "2023")
+class Wheels:
+	def rotate(self):
+		return "Wheels are rotating"
 
-print(my_car.start_engine())
+class Car(Engine, Wheels):
+	def a(self):
+		return super().start()
 
+my_car = Car()
 
-
+print(my_car.start())
+print(my_car.rotate())
+print(my_car.a())
