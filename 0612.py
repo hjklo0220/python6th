@@ -92,12 +92,25 @@
 #
 # print('program continues')
 
-# 예외가 하나가 아닌 경우
+# # 예외가 하나가 아닌 경우
+#
+# try:
+# 	number = 5 + "Not a number"
+# 	# number = int("Not a number")
+# except ValueError:
+# 	print("error: Invalid value")
+# except TypeError:
+# 	print("error: Invalid type")
+
+
+class CustomException(Exception):
+	def __init__(self, message):
+		self.message = message
+
 
 try:
-	number = 5 + "Not a number"
-	# number = int("Not a number")
-except ValueError:
-	print("error: Invalid value")
-except TypeError:
-	print("error: Invalid type")
+	raise CustomException("this is a custom exception")
+except CustomException as e:
+	print(f"Error: {e.message}")
+
+
