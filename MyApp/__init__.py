@@ -1,2 +1,4 @@
 
-__all__ = []
+
+print("version: 1.0")
+

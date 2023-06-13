@@ -76,12 +76,15 @@
 # print(my_car.a())
 
 
-# # 패키지
-#
+# 패키지
+
 # from MyApp.Handlers.text_handler import handle_text
 #
 # input_text = "python package practice"
 # handle_text(input_text)
+
+# import MyApp
+
 
 
 # # 에러 핸들링
@@ -139,20 +142,20 @@
 # pprint.pprint(locals())
 
 
-# dictionary
-
-words = ['apple', 'bat', 'bar', 'atom', 'book']
-by_letters = {}
-
-for word in words:
-	letter = word[0]
-	if letter not in by_letters:
-		by_letters[letter] = [word]
-	else:
-		by_letters[letter].append(word)
-
-print(by_letters)
-# print(by_letters['c'])
+# # dictionary
+#
+# words = ['apple', 'bat', 'bar', 'atom', 'book']
+# by_letters = {}
+#
+# for word in words:
+# 	letter = word[0]
+# 	if letter not in by_letters:
+# 		by_letters[letter] = [word]
+# 	else:
+# 		by_letters[letter].append(word)
+#
+# print(by_letters)
+# # print(by_letters['c'])
 
 
 
