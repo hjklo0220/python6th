@@ -1,30 +1,33 @@
+
+
+
 class ListNode:
-	def __init__(self, value):
-		self.value = value
-		self.next = None
+    def __init__(self, value):
+        self.value = value
+        self.next = None
 
 
 class Stack:
-	def __init__(self):
-		self.head = None
-		self.size = 0
+    def __init__(self):
+        self.head = None
+        self.size = 0
 
-	def is_empty(self):
-		return self.size == 0
+    def is_empty(self):
+        return self.size == 0
 
-	def push(self, value):
-		new_node = ListNode(value)
-		new_node.next = self.head
-		self.head = new_node
-		self.size += 1
+    def push(self, value):
+        new_node = ListNode(value)
+        new_node.next = self.head
+        self.head = new_node
+        self.size += 1
 
-	def pop(self):
-		if self.is_empty():
-			raise IndexError("pop from an empty stack")
-		value = self.head.value
-		self.head = self.head.next
-		self.size -= 1
-		return value
+    def pop(self):
+        if self.is_empty():
+            raise IndexError("pop from an empty stack")
+        value = self.head.value
+        self.head = self.head.next
+        self.size -= 1
+        return value
 
 
 stack = Stack()
@@ -36,12 +39,12 @@ stack.push(4)
 stack.push(5)
 
 for _ in range(5):
-	print(stack.pop())
+    print(stack.pop())
 
 
 # 문제풀이
 
-def removeDuplicateLetters(self, s: str) -> str:
+# def removeDuplicateLetters(self, s: str) -> str:
 
 # stack = []
 # for i in s:
@@ -85,18 +88,18 @@ def removeDuplicateLetters(self, s: str) -> str:
 
 # 이게 할만함
 def removeDuplicateLetters(self, s: str) -> str:
-	last_occurrence = {c: i for i, c in enumerate(s)}
-	stack = []
-	in_stack = set()
+    last_occurrence = {c: i for i, c in enumerate(s)}
+    stack = []
+    in_stack = set()
 
-	for i, c in enumerate(s):
-		if c not in in_stack:
-			while stack and c < stack[-1] and i < last_occurrence[stack[-1]]:
-				in_stack.remove(stack.pop())
-			stack.append(c)
-			in_stack.add(c)
+    for i, c in enumerate(s):
+        if c not in in_stack:
+            while stack and c < stack[-1] and i < last_occurrence[stack[-1]]:
+                in_stack.remove(stack.pop())
+            stack.append(c)
+            in_stack.add(c)
 
-	return "".join(stack)
+    return "".join(stack)
 
 
 # 스택으로 큐만들기
@@ -126,25 +129,25 @@ class MyQueue:
 
 
 # 큐로 스택만들기
-
+import collections
 class MyStack:
 
-	def __init__(self):
-		self.que = collections.deque()
+    def __init__(self):
+        self.que = collections.deque()
 
-	def push(self, x: int) -> None:
-		self.que.append(x)
-		for _ in range(len(self.que) - 1):
-			self.que.append(self.que.popleft())
+    def push(self, x: int) -> None:
+        self.que.append(x)
+        for _ in range(len(self.que) - 1):
+            self.que.append(self.que.popleft())
 
-	def pop(self) -> int:
-		return self.que.popleft()
+    def pop(self) -> int:
+        return self.que.popleft()
 
-	def top(self) -> int:
-		return self.que[0]
+    def top(self) -> int:
+        return self.que[0]
 
-	def empty(self) -> bool:
-		return len(self.que) == 0
+    def empty(self) -> bool:
+        return len(self.que) == 0
 
 
 # 원형 큐 구현
