@@ -17,13 +17,13 @@ SMTP_PORT = 465
 
 message = EmailMessage()
 
-message["Subject"] = "제목입니다."
+message["Subject"] = "현지니"
 message["From"] = "jklo0220@gmail.com"
-message["To"] = "jy02_20@naver.com"
-message.set_content("테스트 메일입니다.")
+message["To"] = "chlguswls241@naver.com"
+message.set_content("이거봐라")
 
 
-with open("miami.jpeg", "rb") as image:
+with open("IMG_5092.jpeg", "rb") as image:
 	image_file = image.read()
 
 image_type = imghdr.what("miami", image_file)
