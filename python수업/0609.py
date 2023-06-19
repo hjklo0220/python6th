@@ -234,9 +234,9 @@ os.rmdir('new_dir')
 os.removedirs('') # 다중 디렉토리 삭제
 
 
-os.makedirs("parent_dir/child_dir/grandchild_dir")
+os.makedirs("../parent_dir/child_dir/grandchild_dir")
 
-for dirpath, dirnames, filenames in os.walk('parent_dir'):  # 디렉토리 탐색
+for dirpath, dirnames, filenames in os.walk('../parent_dir'):  # 디렉토리 탐색
 	print(f"디렉토리 경로 : {dirpath}")
 	print(f"디렉토리 이름 : {dirnames}")
 	print(f"파일이름 : {filenames}")
