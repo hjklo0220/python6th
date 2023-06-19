@@ -29,10 +29,11 @@
 #             slow = slow.next
 #             fast = fast.next.next
 #         return True
-
+import collections
 
 # 그래프
 # DFS 순회
+from  collections import deque
 graph = {
     'A': ['B', 'C'],
     'B': ['A', 'D', 'E'],
@@ -55,8 +56,22 @@ def dfs_iterative(start_node):
             stack.extend(reversed(graph[node]))
 
 
+def bfs_iterative(start_node):
+    queue = deque([start_node])
+
+    while queue:
+        node = queue.popleft()
+        if node not in visited:
+            print(node, end=" ")
+            visited.add(node)
+            queue.extend(graph[node])
+
+
 snode = 'A'
 dfs_iterative(snode)
+print("\n=========")
+visited.clear()
+bfs_iterative(snode)
 
 
 # # https://leetcode.com/problems/number-of-islands/description/
