@@ -20,5 +20,10 @@
 
 #### Django
 
- - urllib.requset 실습
+ - urllib.requset
+ - urllib.parse
+ - http.client
+ - http.server
+
+ - django 프로젝트 생성
  - 
