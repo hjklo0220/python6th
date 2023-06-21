@@ -26,4 +26,5 @@
  - http.server
 
  - django 프로젝트 생성
- - 
+ - polls애플리케이션 생성
+ - model 작성
