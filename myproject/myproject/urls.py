@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 from polls import views
+from myproject import views
 
 urlpatterns = [
+    path('', views.HomeView.as_view(), name="Home"),
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
     path('books/', include('books.urls'))
