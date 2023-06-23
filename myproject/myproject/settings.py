@@ -29,7 +29,6 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -125,3 +124,26 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '[%(asctime)s] [%(levelname)s] %(message)s',
+            'datefmt': '%d/%b/%Y %H:%M:%S'
+        }
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        "django": {"level": "INFO", "handlers": ["console"]},
+        "": {"level": "DEBUG", "handlers": ["console"]},
+    }
+}
+
