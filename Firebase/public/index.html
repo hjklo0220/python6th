@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.23.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.23.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.23.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.23.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.23.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.23.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.23.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.23.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.23.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.23.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+        body {
+            background: #ECEFF1;
+            color: rgba(0, 0, 0, 0.87);
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #message {
+            background: white;
+            max-width: 360px;
+            margin: 100px auto 16px;
+            padding: 32px 24px;
+            border-radius: 3px;
+        }
+
+        #message h2 {
+            color: #ffa100;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 8px;
+        }
+
+        #message h1 {
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba(0, 0, 0, 0.6);
+            margin: 0 0 16px;
+        }
+
+        #message p {
+            line-height: 140%;
+            margin: 16px 0 24px;
+            font-size: 14px;
+        }
+
+        #message a {
+            display: block;
+            text-align: center;
+            background: #039be5;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            padding: 16px;
+            border-radius: 4px;
+        }
+
+        #message, #message a {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        #load {
+            color: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            body, #message {
+                margin-top: 0;
+                background: white;
+                box-shadow: none;
+            }
+
+            body {
+                border-top: 16px solid #ffa100;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="nologin">
+    <h1>로그인</h1>
+    <form id="login-form">
+        <input type="email" id="login-email" placeholder="이메일">
+        <input type="password" id="login-password" placeholder="비밀번호">
+        <button type="submit">로그인</button>
+    </form>
+    <h1>회원가입</h1>
+    <form id="signup-form">
+        <input type="email" id="signup-email" placeholder="이메일">
+        <input type="password" id="signup-password" placeholder="비밀번호">
+        <button type="submit">회원가입</button>
+    </form>
+</div>
+
+<div id="loggedIn" style="display: none">
+    <button onclick="logout()">로그아웃</button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        // 회원 인증시 이벤트 처리
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                console.log('로그인 되었습니다.')
+                const loginComponent = document.getElementById('nologin');
+                const logoutComponent = document.getElementById('loggedIn');
+                loginComponent.style.display = 'none';
+                logoutComponent.style.display = null;
+            } else {
+                console.log('로그인이 필요합니다.')
+                const loginComponent = document.getElementById('nologin');
+                const logoutComponent = document.getElementById('loggedIn');
+                loginComponent.style.display = null;
+                logoutComponent.style.display = 'none';
+            }
+        })
+
+        // 페이지 로딩시 인증여부 확인
+        if (firebase.auth().currentUser) {
+            // 인증회원
+            console.log('로그인 되었습니다.')
+            const loginComponent = document.getElementById('nologin');
+            const logoutComponent = document.getElementById('loggedIn');
+            loginComponent.style.display = 'none';
+            logoutComponent.style.display = null;
+        } else {
+            console.log('로그인이 필요합니다.')
+            const loginComponent = document.getElementById('nologin');
+            const logoutComponent = document.getElementById('loggedIn');
+            loginComponent.style.display = null;
+            logoutComponent.style.display = 'none';
+        }
+
+
+        //회원가입
+        const signupForm = document.getElementById('signup-form');
+        const signupEmail = document.getElementById('signup-email');
+        const signupPassword = document.getElementById('signup-password');
+
+        signupForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = signupEmail.value;
+            const password = signupPassword.value;
+            try {
+                console.log('HERE!!', firebase.auth());
+                console.log('email', email, 'password', password);
+                await firebase.auth().createUserWithEmailAndPassword(email, password);
+            } catch (err) {
+                console.error(err);
+            }
+        });
+
+        //로그인
+        const loginForm = document.getElementById('login-form');
+        const loginEmail = document.getElementById('login-email');
+        const loginPassword = document.getElementById('login-password');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault() // 새로고침 방지
+            const email = loginEmail.value;
+            const password = loginPassword.value;
+            await firebase.auth().signInWithEmailAndPassword(email, password);
+        });
+
+    });
+
+    // 로그아웃
+    function logout() {
+        console.log('로그아웃')
+        firebase.auth().signOut();
+    }
+</script>
+
+</body>
+</html>
